@@ -1,0 +1,4 @@
+E:\Projects\Bad Monkey Software\Software\BME\Core\bin\Documentation\Core.dll
+E:\Projects\Bad Monkey Software\Software\BME\Core\bin\Documentation\Core.pdb
+E:\Projects\Bad Monkey Software\Software\BME\Core\obj\Documentation\Core.dll
+E:\Projects\Bad Monkey Software\Software\BME\Core\obj\Documentation\Core.pdb

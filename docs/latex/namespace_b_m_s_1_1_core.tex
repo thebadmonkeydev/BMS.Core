@@ -1,0 +1,51 @@
+\hypertarget{namespace_b_m_s_1_1_core}{\section{Package B\-M\-S.\-Core}
+\label{namespace_b_m_s_1_1_core}\index{B\-M\-S.\-Core@{B\-M\-S.\-Core}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory}{B\-M\-S\-\_\-\-File\-Log\-Factory}
+\item 
+class \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}{B\-M\-S\-\_\-\-File\-Logger}
+\item 
+class \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___log_factory}{B\-M\-S\-\_\-\-Log\-Factory}
+\begin{DoxyCompactList}\small\item\em Abstract base class for all \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___log_factory}{B\-M\-S\-\_\-\-Log\-Factory} implementations. Provides interface methods. \end{DoxyCompactList}\item 
+class \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___logger}{B\-M\-S\-\_\-\-Logger}
+\begin{DoxyCompactList}\small\item\em Abstract base class for all \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___logger}{B\-M\-S\-\_\-\-Logger} implementations. Provides interface details and common members as well as current logger containers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}{e\-Log\-Level} \{ \\*
+\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a2d3e4144aa384b18849ab9a8abad74d6}{e\-Log\-Level.\-T\-R\-A\-C\-E} = 1, 
+\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43adc30ec20708ef7b0f641ef78b7880a15}{e\-Log\-Level.\-D\-E\-B\-U\-G}, 
+\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a551b723eafd6a31d444fcb2f5920fbd3}{e\-Log\-Level.\-I\-N\-F\-O}, 
+\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a32bd8a1db2275458673903bdb84cb277}{e\-Log\-Level.\-W\-A\-R\-N}, 
+\\*
+\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43abb1ca97ec761fc37101737ba0aa2e7c5}{e\-Log\-Level.\-E\-R\-R\-O\-R}
+ \}
+\begin{DoxyCompactList}\small\item\em Log filter level value enum \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}{\index{B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}!e\-Log\-Level@{e\-Log\-Level}}
+\index{e\-Log\-Level@{e\-Log\-Level}!BMS::Core@{B\-M\-S\-::\-Core}}
+\subsubsection[{e\-Log\-Level}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf B\-M\-S.\-Core.\-e\-Log\-Level}}}\label{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}
+
+
+Log filter level value enum 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\-R\-A\-C\-E@{T\-R\-A\-C\-E}!B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}}\index{B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}!T\-R\-A\-C\-E@{T\-R\-A\-C\-E}}\item[{\em 
+\hypertarget{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a2d3e4144aa384b18849ab9a8abad74d6}{T\-R\-A\-C\-E}\label{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a2d3e4144aa384b18849ab9a8abad74d6}
+}]\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}}\index{B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}\item[{\em 
+\hypertarget{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43adc30ec20708ef7b0f641ef78b7880a15}{D\-E\-B\-U\-G}\label{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43adc30ec20708ef7b0f641ef78b7880a15}
+}]\index{I\-N\-F\-O@{I\-N\-F\-O}!B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}}\index{B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}!I\-N\-F\-O@{I\-N\-F\-O}}\item[{\em 
+\hypertarget{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a551b723eafd6a31d444fcb2f5920fbd3}{I\-N\-F\-O}\label{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a551b723eafd6a31d444fcb2f5920fbd3}
+}]\index{W\-A\-R\-N@{W\-A\-R\-N}!B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}}\index{B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}!W\-A\-R\-N@{W\-A\-R\-N}}\item[{\em 
+\hypertarget{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a32bd8a1db2275458673903bdb84cb277}{W\-A\-R\-N}\label{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43a32bd8a1db2275458673903bdb84cb277}
+}]\index{E\-R\-R\-O\-R@{E\-R\-R\-O\-R}!B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}}\index{B\-M\-S\-::\-Core@{B\-M\-S\-::\-Core}!E\-R\-R\-O\-R@{E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43abb1ca97ec761fc37101737ba0aa2e7c5}{E\-R\-R\-O\-R}\label{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43abb1ca97ec761fc37101737ba0aa2e7c5}
+}]\end{description}
+\end{Desc}

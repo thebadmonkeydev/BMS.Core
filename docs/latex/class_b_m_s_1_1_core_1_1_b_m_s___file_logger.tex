@@ -1,0 +1,176 @@
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}{\section{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger Class Reference}
+\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}\index{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger}}
+}
+Inheritance diagram for B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a4af5a9f2c7dfb54a63af58073771cf7c}{B\-M\-S\-\_\-\-File\-Logger} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes log level and file location to default values (I\-N\-F\-O and ./log.log) \end{DoxyCompactList}\item 
+\hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a35b23ae9c864c71487439c1d23ad3852}{B\-M\-S\-\_\-\-File\-Logger} (string in\-\_\-log\-File\-Name)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}{B\-M\-S\-\_\-\-File\-Logger} using the provided log file name and sets the default log level to I\-N\-F\-O \end{DoxyCompactList}\item 
+\hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a000dfc0708ec465e275fbb155bd8df26}{B\-M\-S\-\_\-\-File\-Logger} (\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}{e\-Log\-Level} in\-\_\-log\-Lvl, string in\-\_\-log\-File\-Name)
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}{B\-M\-S\-\_\-\-File\-Logger} using the provided log level and log file name \end{DoxyCompactList}\item 
+override void \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a98aa2f42304a3e323ea5b9991534aa9d}{log} (\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}{e\-Log\-Level} in\-\_\-log\-Lvl, string in\-\_\-message)
+\begin{DoxyCompactList}\small\item\em Logs a message to the file log \end{DoxyCompactList}\item 
+override void \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a38541edb5b857325dbd4a2493f5913a1}{set\-Log\-Level} (\hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}{e\-Log\-Level} in\-\_\-log\-Lvl)
+\begin{DoxyCompactList}\small\item\em Set the current log message filter level for this log \end{DoxyCompactList}\item 
+override \hyperlink{namespace_b_m_s_1_1_core_a327c4f5128504a45ef61f00cfd661a43}{e\-Log\-Level} \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_ac0e79bcba3ee49400234b0a01a061dcc}{get\-Log\-Level} ()
+\begin{DoxyCompactList}\small\item\em Gets the current log message filter level for this logger \end{DoxyCompactList}\item 
+override void \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_ae3a4548c9a583b12773e5c36d3043b87}{set\-Target} (string in\-\_\-log\-Target)
+\begin{DoxyCompactList}\small\item\em Sets the file location for this logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a76f31e7c9e011c718f8c39f987b9d99b}{m\-\_\-file\-U\-R\-I}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a4af5a9f2c7dfb54a63af58073771cf7c}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-\_\-\-File\-Logger}}
+\index{B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-\_\-\-File\-Logger}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{B\-M\-S\-\_\-\-File\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-B\-M\-S\-\_\-\-File\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a4af5a9f2c7dfb54a63af58073771cf7c}
+
+
+Default constructor. Initializes log level and file location to default values (I\-N\-F\-O and ./log.log) 
+
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a35b23ae9c864c71487439c1d23ad3852}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-\_\-\-File\-Logger}}
+\index{B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-\_\-\-File\-Logger}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{B\-M\-S\-\_\-\-File\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-B\-M\-S\-\_\-\-File\-Logger (
+\begin{DoxyParamCaption}
+\item[{string}]{in\-\_\-log\-File\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a35b23ae9c864c71487439c1d23ad3852}
+
+
+Constructs a \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}{B\-M\-S\-\_\-\-File\-Logger} using the provided log file name and sets the default log level to I\-N\-F\-O 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-log\-File\-Name} & The path to the intended log output file.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a000dfc0708ec465e275fbb155bd8df26}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-\_\-\-File\-Logger}}
+\index{B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-\_\-\-File\-Logger}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{B\-M\-S\-\_\-\-File\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-B\-M\-S\-\_\-\-File\-Logger (
+\begin{DoxyParamCaption}
+\item[{{\bf e\-Log\-Level}}]{in\-\_\-log\-Lvl, }
+\item[{string}]{in\-\_\-log\-File\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a000dfc0708ec465e275fbb155bd8df26}
+
+
+Constructs a \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___file_logger}{B\-M\-S\-\_\-\-File\-Logger} using the provided log level and log file name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-log\-Lvl} & The desired log level\\
+\hline
+{\em in\-\_\-log\-File\-Name} & The path to the intended log output file.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_ac0e79bcba3ee49400234b0a01a061dcc}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!get\-Log\-Level@{get\-Log\-Level}}
+\index{get\-Log\-Level@{get\-Log\-Level}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{get\-Log\-Level}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf e\-Log\-Level} B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-get\-Log\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_ac0e79bcba3ee49400234b0a01a061dcc}
+
+
+Gets the current log message filter level for this logger 
+
+\begin{DoxyReturn}{Returns}
+The current log filter level.
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___logger_ad5812e0e63b7e23ff67d91b14e4af505}{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-Logger}.
+
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a98aa2f42304a3e323ea5b9991534aa9d}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!log@{log}}
+\index{log@{log}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}override void B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-log (
+\begin{DoxyParamCaption}
+\item[{{\bf e\-Log\-Level}}]{in\-\_\-log\-Lvl, }
+\item[{string}]{in\-\_\-message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a98aa2f42304a3e323ea5b9991534aa9d}
+
+
+Logs a message to the file log 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-log\-Lvl} & The log level of this message.\\
+\hline
+{\em in\-\_\-message} & The message.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___logger_a97d054fecacfeb7aadae1f60d35016f2}{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-Logger}.
+
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a38541edb5b857325dbd4a2493f5913a1}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!set\-Log\-Level@{set\-Log\-Level}}
+\index{set\-Log\-Level@{set\-Log\-Level}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{set\-Log\-Level}]{\setlength{\rightskip}{0pt plus 5cm}override void B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-set\-Log\-Level (
+\begin{DoxyParamCaption}
+\item[{{\bf e\-Log\-Level}}]{in\-\_\-log\-Lvl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a38541edb5b857325dbd4a2493f5913a1}
+
+
+Set the current log message filter level for this log 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-log\-Lvl} & The new log level.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___logger_a5d81080fcbf80bb7246284a725b78cf6}{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-Logger}.
+
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_ae3a4548c9a583b12773e5c36d3043b87}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!set\-Target@{set\-Target}}
+\index{set\-Target@{set\-Target}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{set\-Target}]{\setlength{\rightskip}{0pt plus 5cm}override void B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-set\-Target (
+\begin{DoxyParamCaption}
+\item[{string}]{in\-\_\-log\-Target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_ae3a4548c9a583b12773e5c36d3043b87}
+
+
+Sets the file location for this logger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-log\-Target} & The new log target as a file path.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_b_m_s_1_1_core_1_1_b_m_s___logger_af494d7578070ae9b6d779c9ecc0392d7}{B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-Logger}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a76f31e7c9e011c718f8c39f987b9d99b}{\index{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}!m\-\_\-file\-U\-R\-I@{m\-\_\-file\-U\-R\-I}}
+\index{m\-\_\-file\-U\-R\-I@{m\-\_\-file\-U\-R\-I}!BMS::Core::BMS_FileLogger@{B\-M\-S\-::\-Core\-::\-B\-M\-S\-\_\-\-File\-Logger}}
+\subsubsection[{m\-\_\-file\-U\-R\-I}]{\setlength{\rightskip}{0pt plus 5cm}string B\-M\-S.\-Core.\-B\-M\-S\-\_\-\-File\-Logger.\-m\-\_\-file\-U\-R\-I\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_m_s_1_1_core_1_1_b_m_s___file_logger_a76f31e7c9e011c718f8c39f987b9d99b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+E\-:/\-Projects/\-Bad Monkey Software/\-Software/\-B\-M\-E/\-Core/\hyperlink{_b_m_s___file_logger_8cs}{B\-M\-S\-\_\-\-File\-Logger.\-cs}\end{DoxyCompactItemize}
