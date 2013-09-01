@@ -107,13 +107,13 @@ namespace BMS
             /// <param name="in_message">The message.</param>
             public override void log(eLogLevel in_logLvl, string in_message)
             {
-                //  return early if not logging message
-                //if (in_logLvl < m_curLogLevel)
-                //{
-                //    return;
-                //}
-
+                //  Console logging does not filter messages (used for debugging)
                 Console.WriteLine(BMS_Logger.getTimeStamp() + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
+            }
+
+            public override void logBroadcast(eLogLevel in_logLvl, string in_message)
+            {
+                log(in_logLvl, in_message);
             }
 
             /// <summary>

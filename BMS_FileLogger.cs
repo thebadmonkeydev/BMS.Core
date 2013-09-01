@@ -88,6 +88,29 @@ namespace BMS
                 }
             }
 
+            public override void logBroadcast(eLogLevel in_logLvl, string in_message)
+            {
+                StreamWriter logWriter = null;
+                string timeStamp = BMS_Logger.getTimeStamp();
+                try
+                {
+                    logWriter = new StreamWriter(m_fileURI, true);
+                    logWriter.WriteLine(timeStamp + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
+                    logWriter.Flush();
+                    logWriter.Close();
+                }
+                catch (Exception ex)
+                {
+                }
+                finally
+                {
+                    if (logWriter != null)
+                    {
+                        logWriter.Dispose();
+                    }
+                }
+            }
+
             /// <summary>
             /// Sets the file location for this logger.
             /// </summary>

@@ -142,6 +142,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af494d7578070ae9b6d779c9ecc0392d7"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#af494d7578070ae9b6d779c9ecc0392d7">setTarget</a> (string in_logTarget)</td></tr>
 <tr class="memdesc:af494d7578070ae9b6d779c9ecc0392d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to set the log instance's target (specific per log type)  <a href="#af494d7578070ae9b6d779c9ecc0392d7">More...</a><br/></td></tr>
 <tr class="separator:af494d7578070ae9b6d779c9ecc0392d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a13eb45f0cd3f3d9fa1906fc40cf2b55f">logBroadcast</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for writing broadcast (system) messages to the log  <a href="#a13eb45f0cd3f3d9fa1906fc40cf2b55f">More...</a><br/></td></tr>
+<tr class="separator:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -402,6 +405,51 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a13eb45f0cd3f3d9fa1906fc40cf2b55f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void BMS.Core.BMS_Logger.logBroadcast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interface for writing broadcast (system) messages to the log </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_logLvl</td><td>The level of this message.</td></tr>
+    <tr><td class="paramname">in_message</td><td>The message to log.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2">BMS.Core.BMS_ConsoleLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc">BMS.Core.BMS_FileLogger</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7e60cb016502c854765ba6b1befc8041"></a>
 <div class="memitem">
 <div class="memproto">
@@ -492,7 +540,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_b_m_s.html">BMS</a></li><li class="navelem"><a class="el" href="namespace_b_m_s_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html">BMS_Logger</a></li>
-    <li class="footer">Generated on Thu Aug 29 2013 00:27:46 for BME.Core by
+    <li class="footer">Generated on Sun Sep 1 2013 02:13:25 for BME.Core by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

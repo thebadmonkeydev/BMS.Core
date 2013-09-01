@@ -2,3 +2,4 @@ E:\Projects\Bad Monkey Software\Software\BME\Core\bin\Release\Core.dll
 E:\Projects\Bad Monkey Software\Software\BME\Core\bin\Release\Core.pdb
 E:\Projects\Bad Monkey Software\Software\BME\Core\obj\Release\Core.dll
 E:\Projects\Bad Monkey Software\Software\BME\Core\obj\Release\Core.pdb
+E:\Projects\Bad Monkey Software\Software\BME\Core\obj\Release\Core.csprojResolveAssemblyReference.cache

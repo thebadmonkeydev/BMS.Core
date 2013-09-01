@@ -98,7 +98,7 @@ namespace BMS
             /// <returns>String representation of the current time stamp.</returns>
             public static string getTimeStamp()
             {
-                return DateTime.Now.Date.ToShortDateString() + "\t" + DateTime.Now.TimeOfDay.Hours + ":" + DateTime.Now.TimeOfDay.Minutes + ":" + DateTime.Now.TimeOfDay.Seconds + ":" + DateTime.Now.TimeOfDay.Milliseconds;
+                return DateTime.Now.Date.ToShortDateString() + " " + DateTime.Now.TimeOfDay.Hours + ":" + DateTime.Now.TimeOfDay.Minutes + ":" + DateTime.Now.TimeOfDay.Seconds + ":" + DateTime.Now.TimeOfDay.Milliseconds;
             }
 
             /// <summary>
@@ -216,6 +216,13 @@ namespace BMS
             /// </summary>
             /// <param name="in_logTarget">The new log target.</param>
             abstract public void setTarget(string in_logTarget);
+
+            /// <summary>
+            /// Interface for writing broadcast (system) messages to the log
+            /// </summary>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            abstract public void logBroadcast(eLogLevel in_logLvl, string in_message);
         #endregion
         }
     }
