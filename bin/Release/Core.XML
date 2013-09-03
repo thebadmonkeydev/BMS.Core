@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core</name>
+    </assembly>
+    <members>
+        <member name="T:BMS.Core.BMS_ConsoleLogFactory">
+            <summary>
+            Factory responsible for the creation of console logs
+            </summary>
+        </member>
+        <member name="T:BMS.Core.BMS_LogFactory">
+            <summary>
+            Abstract base class for all BMS_LogFactory implementations.  Provides interface methods.
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_LogFactory.create(System.String)">
+            <summary>
+            Interface method for BMS_Logger object creation
+            </summary>
+            <returns>A specific BMS_Logger subtype as a generic BMS_Logger.</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogFactory.create(System.String)">
+            <summary>
+            Creates a new BMS_ConsoleLogger instance.
+            </summary>
+            <param name="in_fileName">The name associated with this log</param>
+            <returns>The newly created console log</returns>
+        </member>
+        <member name="T:BMS.Core.BMS_ConsoleLogger">
+            <summary>
+            Console specific implementation of a logger
+            </summary>
+        </member>
+        <member name="T:BMS.Core.BMS_Logger">
+            <summary>
+            Abstract base class for all BMS_Logger implementations.  Provides interface details and common members as well as current logger containers.
+            </summary>
+        </member>
+        <member name="F:BMS.Core.BMS_Logger.m_loggers">
+            <summary>
+            Maintains the collection of created loggers
+            </summary>
+            <remarks>Represented as Hashtable to provide ~O(1) access based on logger name (hash key)</remarks>
+        </member>
+        <member name="F:BMS.Core.BMS_Logger.m_curLogLevel">
+            <summary>
+            The current logger's message filter level
+            </summary>
+        </member>
+        <member name="F:BMS.Core.BMS_Logger.m_logName">
+            <summary>
+            The current logger's name
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.getTimeStamp">
+            <summary>
+            Returns a properly formatted time stamp for each log message
+            </summary>
+            <returns>String representation of the current time stamp.</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.getLevelTag(BMS.Core.eLogLevel)">
+            <summary>
+            Provides the string representation of the provided log level
+            </summary>
+            <param name="in_logLvl">The log message filter level value to convert.</param>
+            <returns>String representation of the filter level value</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.getLogger(System.String)">
+            <summary>
+            Gets the named file logger or creates it if it does not exist
+            </summary>
+            <param name="in_logName">The name of the desired log (access key)</param>
+            <returns>The requested file logger</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.getLogger(System.String,BMS.Core.BMS_LogFactory)">
+            <summary>
+            Gets the named logger if it exists or creates the logger with the provided log factory.
+            </summary>
+            <param name="in_logName">The name of the desired log</param>
+            <param name="in_factory">The instance of the BMS_LogFactory to use for creation if necessary</param>
+            <returns>The requested Logger.</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.broadcast(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Global log write method.  writes the message to all contained (previously created) logs
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+            <remarks>Does not filter log messages.  Global log messages are considered system level messages and will always be logged</remarks>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.logToWindows(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Logs a message to the windows event logs
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+            <remarks>This method will not log messages of type TRACE or DEBUG, these types of messages will simply spam the logs.</remarks>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.setLogLevel(BMS.Core.eLogLevel)">
+            <summary>
+            Set the current log message filter level for this log
+            </summary>
+            <param name="in_logLvl">The new log level.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.getName">
+            <summary>
+            Retrieves the log instance's name
+            </summary>
+            <returns>The log name.</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.getLogLevel">
+            <summary>
+            Gets the current log message filter level for this logger
+            </summary>
+            <returns>The current log filter level.</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.log(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Interface for writting a message to the log instance
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.setTarget(System.String)">
+            <summary>
+            Interface to set the log instance's target (specific per log type)
+            </summary>
+            <param name="in_logTarget">The new log target.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.logBroadcast(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Interface for writing broadcast (system) messages to the log
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_Logger.shutdown">
+            <summary>
+            Interface for ensuring the shutdown of the log instance
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.FindWindow(System.String,System.String)">
+            <summary>
+            Locates a console window given the console window name
+            </summary>
+            <param name="lpClassName">Class Name.  Usually null.</param>
+            <param name="lpWindowName">The window name.</param>
+            <returns>IntPtr to the window if located.  Null is it was not found.</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.ShowWindow(System.IntPtr,System.Int32)">
+            <summary>
+            Allows for the showing or hiding of a window
+            </summary>
+            <param name="hWnd">IntPtr to the console window.</param>
+            <param name="nCmdShow">0-Hide; 1-Show.</param>
+            <returns>Boolean success flag</returns>
+        </member>
+        <member name="F:BMS.Core.BMS_ConsoleLogger.sm_instance">
+            <summary>
+            Singleton instance.
+            </summary>
+            <remarks>Windows only allows a single console instance per process, thus the adoption of the singleton patern.</remarks>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.get(System.String)">
+            <summary>
+            Static singleton access method
+            </summary>
+            <returns>The BMS_ConsoleLogger instance</returns>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.#ctor">
+            <summary>
+            Default Constructor.  Initializes log level to default value (TRACE)
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.#ctor(System.String)">
+            <summary>
+            Creates the console logger instance with a specified name
+            </summary>
+            <param name="in_fileName">the name of this logger.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.#ctor(BMS.Core.eLogLevel)">
+            <summary>
+            Constructs a BMS_ConsoleLogger.
+            </summary>
+            <param name="in_logLvl"></param>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.log(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Logs a message to the console log
+            </summary>
+            <param name="in_logLvl">The log level of this message.</param>
+            <param name="in_message">The message.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.logBroadcast(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Logs a broadcast (system) message, ignoring level filtering
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.setTarget(System.String)">
+            <summary>
+            Has no Effect for the Console Logger instance
+            </summary>
+            <param name="in_logTarget"></param>
+        </member>
+        <member name="M:BMS.Core.BMS_ConsoleLogger.shutdown">
+            <summary>
+            Shuts down the allocated console
+            </summary>
+        </member>
+        <member name="T:BMS.Core.BMS_FileLogFactory">
+            <summary>
+            Factory to create file loggers
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogFactory.create(System.String)">
+            <summary>
+            Creates a new BMS_ConsoleLogger instance.
+            </summary>
+            <param name="in_fileName">The name associated with this log</param>
+            <returns>The newly created console log</returns>
+        </member>
+        <member name="T:BMS.Core.BMS_FileLogger">
+            <summary>
+            File based implementation of the logger
+            </summary>
+        </member>
+        <member name="F:BMS.Core.BMS_FileLogger.m_fileURI">
+            <summary>
+            File URI for the log file
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.#ctor">
+            <summary>
+            Default constructor.  Initializes log level and file location to default values (INFO and ./log.log)
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.#ctor(System.String)">
+            <summary>
+            Constructs a BMS_FileLogger using the provided log file name and sets the default log level to INFO
+            </summary>
+            <param name="in_logFileName">The path to the intended log output file.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.#ctor(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Constructs a BMS_FileLogger using the provided log level and log file name
+            </summary>
+            <param name="in_logLvl">The desired log level</param>
+            <param name="in_logFileName">The path to the intended log output file.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.log(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Logs a message to the file log
+            </summary>
+            <param name="in_logLvl">The log level of this message.</param>
+            <param name="in_message">The message.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.logBroadcast(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Logs a broadcast (system) message, ignoring level filtering
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.setTarget(System.String)">
+            <summary>
+            Sets the file location for this logger.
+            </summary>
+            <param name="in_logTarget">The new log target as a file path.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_FileLogger.shutdown">
+            <summary>
+            Shuts down the file logger
+            </summary>
+            <remarks>Nothing is done here because file handles are created and destroyed for each log message</remarks>
+        </member>
+        <member name="T:BMS.Core.eLogLevel">
+            <summary>
+            Log filter level value enum
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.TRACE">
+            <summary>
+            All messages are written (usually development only setting)
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.DEBUG">
+            <summary>
+            Provides Debug level output
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.INFO">
+            <summary>
+            Provides informative output
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.WARN">
+            <summary>
+            Provides warning output (unlikely or possibly bad scenarios)
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.ERROR">
+            <summary>
+            Error level output, only critical messages
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.SYSTEM">
+            <summary>
+            System level messages used for broadcasts and product level messages
+            </summary>
+        </member>
+        <member name="F:BMS.Core.eLogLevel.NONE">
+            <summary>
+            No log messages are logged
+            </summary>
+        </member>
+        <member name="T:BMS.Core.BMS_MultiLogFactory">
+            <summary>
+            Factory to create multi log loggers
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLogFactory.create(System.String)">
+            <summary>
+            Creates a new BMS_MultiLog instance
+            </summary>
+            <param name="in_fileName">THe name associated with this log.</param>
+            <returns>The newly created multi log</returns>
+        </member>
+        <member name="T:BMS.Core.BMS_MultiLog">
+            <summary>
+            Provides the ability to group logs within a single log instance
+            </summary>
+        </member>
+        <member name="F:BMS.Core.BMS_MultiLog.m_loggers">
+            <summary>
+            Collection of loggers using hash mapping for O(1) access by name key
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.#ctor(System.String)">
+            <summary>
+            Default constructor for multilog objects
+            </summary>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.addLogger(System.String)">
+            <summary>
+            Adds a logger to this multi-logger, creating a deafult file logger if necessary
+            </summary>
+            <param name="in_logName">The name of the logger.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.addLogger(System.String,BMS.Core.BMS_LogFactory)">
+            <summary>
+            Adds a logger using the provided log factory to create it if necessary
+            </summary>
+            <param name="in_logName">The name of the logger</param>
+            <param name="in_logFactory">The factory for use if creation is necessary.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.log(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Writes a message to all logs within this logger
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.logBroadcast(BMS.Core.eLogLevel,System.String)">
+            <summary>
+            Writes a broadcast (system) message to all logs within this logger
+            </summary>
+            <param name="in_logLvl">The level of this message.</param>
+            <param name="in_message">The message to log.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.setTarget(System.String)">
+            <summary>
+            Set's the target of ALL loggers in this log
+            </summary>
+            <param name="in_logTarget">The new log target.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.setTarget(System.String,System.String)">
+            <summary>
+            Sets the target of the named logger (if it exists in this logger)
+            </summary>
+            <param name="in_logName">The name of the logger to modify.</param>
+            <param name="in_logTarget">The new log target.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.setLogLevel(BMS.Core.eLogLevel)">
+            <summary>
+            Sets the log message filter level for ALL loggers in this logger
+            </summary>
+            <param name="in_logLvl">The new log filter level.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.setLogLevel(System.String,BMS.Core.eLogLevel)">
+            <summary>
+            Sets the log message filter level for the specified logger
+            </summary>
+            <param name="in_logName">The name of the log to modify.</param>
+            <param name="in_logLvl">The new log filter level.</param>
+        </member>
+        <member name="M:BMS.Core.BMS_MultiLog.shutdown">
+            <summary>
+            Shuts down all contained loggers
+            </summary>
+        </member>
+    </members>
+</doc>

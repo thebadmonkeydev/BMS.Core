@@ -117,16 +117,25 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory responsible for the creation of console logs  <a href="class_b_m_s_1_1_core_1_1_b_m_s___console_log_factory.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html">BMS_ConsoleLogger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Console specific implementation of a logger  <a href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html">BMS_FileLogFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create file loggers  <a href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html">BMS_FileLogger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">File based implementation of the logger  <a href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html">BMS_LogFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for all <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html" title="Abstract base class for all BMS_LogFactory implementations. Provides interface methods. ">BMS_LogFactory</a> implementations. Provides interface methods.  <a href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html">BMS_Logger</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for all <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> implementations. Provides interface details and common members as well as current logger containers.  <a href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html">BMS_MultiLogFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create multi log loggers  <a href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html">BMS_MultiLog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the ability to group logs within a single log instance  <a href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -159,18 +168,25 @@ Enumerations</h2></td></tr>
 <p>Log filter level value enum </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43a2d3e4144aa384b18849ab9a8abad74d6"></a>TRACE</em>&nbsp;</td><td class="fielddoc">
+<p>All messages are written (usually development only setting) </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43adc30ec20708ef7b0f641ef78b7880a15"></a>DEBUG</em>&nbsp;</td><td class="fielddoc">
+<p>Provides Debug level output </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43a551b723eafd6a31d444fcb2f5920fbd3"></a>INFO</em>&nbsp;</td><td class="fielddoc">
+<p>Provides informative output </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43a32bd8a1db2275458673903bdb84cb277"></a>WARN</em>&nbsp;</td><td class="fielddoc">
+<p>Provides warning output (unlikely or possibly bad scenarios) </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43abb1ca97ec761fc37101737ba0aa2e7c5"></a>ERROR</em>&nbsp;</td><td class="fielddoc">
+<p>Error level output, only critical messages </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43afa177138f94a7ea01f549b1aa7893d03"></a>SYSTEM</em>&nbsp;</td><td class="fielddoc">
+<p>System level messages used for broadcasts and product level messages </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a327c4f5128504a45ef61f00cfd661a43ab50339a10e1de285ac99d4c3990b8693"></a>NONE</em>&nbsp;</td><td class="fielddoc">
+<p>No log messages are logged </p>
 </td></tr>
 </table>
 
@@ -182,7 +198,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_b_m_s.html">BMS</a></li><li class="navelem"><a class="el" href="namespace_b_m_s_1_1_core.html">Core</a></li>
-    <li class="footer">Generated on Sun Sep 1 2013 02:13:25 for BME.Core by
+    <li class="footer">Generated on Tue Sep 3 2013 00:50:14 for BME.Core by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

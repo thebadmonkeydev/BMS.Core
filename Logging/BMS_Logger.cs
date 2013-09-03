@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Diagnostics;
+using System.Reflection;
 
 //  Comments section for each module containing configurable elements
 //  Log file must be written to and closed after each message
@@ -23,7 +25,7 @@ using System.Collections;
 //  configurable server logging (net logger), must use web service and log to [service]application database
 //  more granularity on return codes from client side, possible extension of API for multiple method calls
 
-/** Configurable Elements
+/* Configurable Elements
  *      1.  log location
  *      2.  naming convention
  *      3.  log file roll over interval
@@ -49,12 +51,39 @@ namespace BMS
         /// </summary>
         public enum eLogLevel
         {
+            /// <summary>
+            /// All messages are written (usually development only setting)
+            /// </summary>
             TRACE = 1,
+
+            /// <summary>
+            /// Provides Debug level output
+            /// </summary>
             DEBUG,
+
+            /// <summary>
+            /// Provides informative output
+            /// </summary>
             INFO,
+
+            /// <summary>
+            /// Provides warning output (unlikely or possibly bad scenarios)
+            /// </summary>
             WARN,
+
+            /// <summary>
+            /// Error level output, only critical messages
+            /// </summary>
             ERROR,
+
+            /// <summary>
+            /// System level messages used for broadcasts and product level messages
+            /// </summary>
             SYSTEM,
+
+            /// <summary>
+            /// No log messages are logged
+            /// </summary>
             NONE
         };
 
@@ -81,7 +110,7 @@ namespace BMS
             /// Maintains the collection of created loggers
             /// </summary>
             /// <remarks>Represented as Hashtable to provide ~O(1) access based on logger name (hash key)</remarks>
-            private static Hashtable loggers = new Hashtable();
+            private static Hashtable m_loggers = new Hashtable();
         #endregion
 
         #region Protected Members
@@ -89,6 +118,11 @@ namespace BMS
             /// The current logger's message filter level
             /// </summary>
             protected eLogLevel m_curLogLevel;
+
+            /// <summary>
+            /// The current logger's name
+            /// </summary>
+            protected string m_logName;
         #endregion
 
         #region Static Methods
@@ -136,12 +170,12 @@ namespace BMS
             /// <returns>The requested file logger</returns>
             public static BMS_Logger getLogger(string in_logName)
             {
-                BMS_Logger ret = (BMS_Logger)loggers[in_logName];
+                BMS_Logger ret = (BMS_Logger)m_loggers[in_logName];
 
                 if (ret == null)
                 {
                     ret = new BMS_FileLogFactory().create(in_logName);
-                    loggers.Add(in_logName, ret);
+                    m_loggers.Add(in_logName, ret);
                 }
 
                 return ret;
@@ -155,12 +189,12 @@ namespace BMS
             /// <returns>The requested Logger.</returns>
             public static BMS_Logger getLogger(string in_logName, BMS_LogFactory in_factory)
             {
-                BMS_Logger ret = (BMS_Logger)loggers[in_logName];
+                BMS_Logger ret = (BMS_Logger)m_loggers[in_logName];
 
                 if (ret == null)
                 {
-                    ret = in_factory.create("./" + in_logName);
-                    loggers.Add(in_logName, ret);
+                    ret = in_factory.create(in_logName);
+                    m_loggers.Add(in_logName, ret);
                 }
 
                 return ret;
@@ -169,18 +203,50 @@ namespace BMS
             /// <summary>
             /// Global log write method.  writes the message to all contained (previously created) logs
             /// </summary>
+            /// <param name="in_logLvl">The level of this message.</param>
             /// <param name="in_message">The message to log.</param>
             /// <remarks>Does not filter log messages.  Global log messages are considered system level messages and will always be logged</remarks>
-            public static void broadcast(string in_message)
+            public static void broadcast(eLogLevel in_logLvl, string in_message)
             {
-                if (loggers.Keys.Count > 0)
+                foreach (DictionaryEntry it in m_loggers)
                 {
-                    foreach (DictionaryEntry it in loggers)
-                    {
-                        ((BMS_Logger)it.Value).log(eLogLevel.SYSTEM, in_message);
-                    }
+                    ((BMS_Logger)it.Value).logBroadcast(eLogLevel.SYSTEM, in_message);
                 }
             }
+
+            /// <summary>
+            /// Logs a message to the windows event logs
+            /// </summary>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            /// <remarks>This method will not log messages of type TRACE or DEBUG, these types of messages will simply spam the logs.</remarks>
+            public static void logToWindows(eLogLevel in_logLvl, string in_message)
+            {
+                if (!EventLog.SourceExists("BMS.Core"))
+                    EventLog.CreateEventSource("BMS.Core", "Application");
+
+                EventLogEntryType messageType = EventLogEntryType.Information;
+                switch (in_logLvl)
+                {
+                    case eLogLevel.ERROR:
+                        messageType = EventLogEntryType.Error;
+                        break;
+                    case eLogLevel.INFO:
+                        messageType = EventLogEntryType.Information;
+                        break;
+                    case eLogLevel.WARN:
+                        messageType = EventLogEntryType.Warning;
+                        break;
+                    case eLogLevel.SYSTEM:
+                        messageType = EventLogEntryType.Error;
+                        break;
+                    default:
+                        return;
+                }
+
+                EventLog.WriteEntry("BMS.Core", "[BMS_Logger.getLevelTag (in_logLvl)] " + in_message, messageType, 0);
+            }
+
         #endregion
 
         #region Public Methods
@@ -191,6 +257,15 @@ namespace BMS
             public void setLogLevel(eLogLevel in_logLvl)
             {
                 m_curLogLevel = in_logLvl;
+            }
+
+            /// <summary>
+            /// Retrieves the log instance's name
+            /// </summary>
+            /// <returns>The log name.</returns>
+            public string getName()
+            {
+                return m_logName;
             }
 
             /// <summary>
@@ -223,6 +298,11 @@ namespace BMS
             /// <param name="in_logLvl">The level of this message.</param>
             /// <param name="in_message">The message to log.</param>
             abstract public void logBroadcast(eLogLevel in_logLvl, string in_message);
+
+            /// <summary>
+            /// Interface for ensuring the shutdown of the log instance
+            /// </summary>
+            abstract public void shutdown();
         #endregion
         }
     }

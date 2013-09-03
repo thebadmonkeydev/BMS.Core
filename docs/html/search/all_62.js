@@ -11,6 +11,10 @@ var searchData=
   ['bms_5flogfactory',['BMS_LogFactory',['../class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html',1,'BMS::Core']]],
   ['bms_5flogger',['BMS_Logger',['../class_b_m_s_1_1_core_1_1_b_m_s___logger.html',1,'BMS::Core']]],
   ['bms_5flogger_2ecs',['BMS_Logger.cs',['../_b_m_s___logger_8cs.html',1,'']]],
-  ['broadcast',['broadcast',['../class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a16e67d891ac42d9baf7d3dc7fe3494b5',1,'BMS::Core::BMS_Logger']]],
+  ['bms_5fmultilog',['BMS_MultiLog',['../class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a661d72f6f7a06bfb38da639cb09984d5',1,'BMS::Core::BMS_MultiLog']]],
+  ['bms_5fmultilog',['BMS_MultiLog',['../class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html',1,'BMS::Core']]],
+  ['bms_5fmultilog_2ecs',['BMS_MultiLog.cs',['../_b_m_s___multi_log_8cs.html',1,'']]],
+  ['bms_5fmultilogfactory',['BMS_MultiLogFactory',['../class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html',1,'BMS::Core']]],
+  ['broadcast',['broadcast',['../class_b_m_s_1_1_core_1_1_b_m_s___logger.html#aa1806fcef246153a42044f6afcb75177',1,'BMS::Core::BMS_Logger']]],
   ['core',['Core',['../namespace_b_m_s_1_1_core.html',1,'BMS']]]
 ];

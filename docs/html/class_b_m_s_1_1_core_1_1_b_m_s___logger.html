@@ -123,8 +123,9 @@ Inheritance diagram for BMS.Core.BMS_Logger:</div>
  <div class="center">
   <img src="class_b_m_s_1_1_core_1_1_b_m_s___logger.png" usemap="#BMS.Core.BMS_Logger_map" alt=""/>
   <map id="BMS.Core.BMS_Logger_map" name="BMS.Core.BMS_Logger_map">
-<area href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html" alt="BMS.Core.BMS_ConsoleLogger" shape="rect" coords="0,56,195,80"/>
-<area href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html" alt="BMS.Core.BMS_FileLogger" shape="rect" coords="205,56,400,80"/>
+<area href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html" title="Console specific implementation of a logger " alt="BMS.Core.BMS_ConsoleLogger" shape="rect" coords="0,56,195,80"/>
+<area href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html" title="File based implementation of the logger " alt="BMS.Core.BMS_FileLogger" shape="rect" coords="205,56,400,80"/>
+<area href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html" title="Provides the ability to group logs within a single log instance " alt="BMS.Core.BMS_MultiLog" shape="rect" coords="410,56,605,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -133,6 +134,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e60cb016502c854765ba6b1befc8041"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a7e60cb016502c854765ba6b1befc8041">setLogLevel</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl)</td></tr>
 <tr class="memdesc:a7e60cb016502c854765ba6b1befc8041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current log message filter level for this log  <a href="#a7e60cb016502c854765ba6b1befc8041">More...</a><br/></td></tr>
 <tr class="separator:a7e60cb016502c854765ba6b1befc8041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c4a9bdff95d501f5870bd3f37587a7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a29c4a9bdff95d501f5870bd3f37587a7">getName</a> ()</td></tr>
+<tr class="memdesc:a29c4a9bdff95d501f5870bd3f37587a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the log instance's name  <a href="#a29c4a9bdff95d501f5870bd3f37587a7">More...</a><br/></td></tr>
+<tr class="separator:a29c4a9bdff95d501f5870bd3f37587a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6b008ddb14edfc4487e79c69476b66e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#ab6b008ddb14edfc4487e79c69476b66e">getLogLevel</a> ()</td></tr>
 <tr class="memdesc:ab6b008ddb14edfc4487e79c69476b66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current log message filter level for this logger  <a href="#ab6b008ddb14edfc4487e79c69476b66e">More...</a><br/></td></tr>
 <tr class="separator:ab6b008ddb14edfc4487e79c69476b66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a13eb45f0cd3f3d9fa1906fc40cf2b55f">logBroadcast</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
 <tr class="memdesc:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for writing broadcast (system) messages to the log  <a href="#a13eb45f0cd3f3d9fa1906fc40cf2b55f">More...</a><br/></td></tr>
 <tr class="separator:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04422e20490308120cd3a5e3d505f7d3"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a04422e20490308120cd3a5e3d505f7d3">shutdown</a> ()</td></tr>
+<tr class="memdesc:a04422e20490308120cd3a5e3d505f7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for ensuring the shutdown of the log instance  <a href="#a04422e20490308120cd3a5e3d505f7d3">More...</a><br/></td></tr>
+<tr class="separator:a04422e20490308120cd3a5e3d505f7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -160,20 +167,26 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afd14fb9faa2e832bda16a5a5f7df41f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html">BMS_Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#afd14fb9faa2e832bda16a5a5f7df41f1">getLogger</a> (string in_logName, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html">BMS_LogFactory</a> in_factory)</td></tr>
 <tr class="memdesc:afd14fb9faa2e832bda16a5a5f7df41f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the named logger if it exists or creates the logger with the provided log factory.  <a href="#afd14fb9faa2e832bda16a5a5f7df41f1">More...</a><br/></td></tr>
 <tr class="separator:afd14fb9faa2e832bda16a5a5f7df41f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e67d891ac42d9baf7d3dc7fe3494b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a16e67d891ac42d9baf7d3dc7fe3494b5">broadcast</a> (string in_message)</td></tr>
-<tr class="memdesc:a16e67d891ac42d9baf7d3dc7fe3494b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global log write method. writes the message to all contained (previously created) logs  <a href="#a16e67d891ac42d9baf7d3dc7fe3494b5">More...</a><br/></td></tr>
-<tr class="separator:a16e67d891ac42d9baf7d3dc7fe3494b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1806fcef246153a42044f6afcb75177"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#aa1806fcef246153a42044f6afcb75177">broadcast</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:aa1806fcef246153a42044f6afcb75177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global log write method. writes the message to all contained (previously created) logs  <a href="#aa1806fcef246153a42044f6afcb75177">More...</a><br/></td></tr>
+<tr class="separator:aa1806fcef246153a42044f6afcb75177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf02d1e508ed7b956f0dc8c04f52ef4d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#acf02d1e508ed7b956f0dc8c04f52ef4d">logToWindows</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:acf02d1e508ed7b956f0dc8c04f52ef4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message to the windows event logs  <a href="#acf02d1e508ed7b956f0dc8c04f52ef4d">More...</a><br/></td></tr>
+<tr class="separator:acf02d1e508ed7b956f0dc8c04f52ef4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a2a89bc725b72e530c7cb1d8ceb44e74c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a2a89bc725b72e530c7cb1d8ceb44e74c">m_curLogLevel</a></td></tr>
 <tr class="memdesc:a2a89bc725b72e530c7cb1d8ceb44e74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current logger's message filter level  <a href="#a2a89bc725b72e530c7cb1d8ceb44e74c">More...</a><br/></td></tr>
 <tr class="separator:a2a89bc725b72e530c7cb1d8ceb44e74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139552a6872cf0ecc6961f3464e46204"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a139552a6872cf0ecc6961f3464e46204">m_logName</a></td></tr>
+<tr class="memdesc:a139552a6872cf0ecc6961f3464e46204"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current logger's name  <a href="#a139552a6872cf0ecc6961f3464e46204">More...</a><br/></td></tr>
+<tr class="separator:a139552a6872cf0ecc6961f3464e46204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for all <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> implementations. Provides interface details and common members as well as current logger containers. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a16e67d891ac42d9baf7d3dc7fe3494b5"></a>
+<a class="anchor" id="aa1806fcef246153a42044f6afcb75177"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -183,9 +196,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">static void BMS.Core.BMS_Logger.broadcast </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>in_message</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -198,6 +221,7 @@ Protected Attributes</h2></td></tr>
 <p>Global log write method. writes the message to all contained (previously created) logs </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">in_logLvl</td><td>The level of this message.</td></tr>
     <tr><td class="paramname">in_message</td><td>The message to log.</td></tr>
   </table>
   </dd>
@@ -334,6 +358,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a29c4a9bdff95d501f5870bd3f37587a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string BMS.Core.BMS_Logger.getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the log instance's name </p>
+<dl class="section return"><dt>Returns</dt><dd>The log name.</dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a8abcf123f46bba68e51a222c0181a76c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -401,7 +443,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43">BMS.Core.BMS_ConsoleLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d">BMS.Core.BMS_FileLogger</a>.</p>
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a013ef6e1e62ed2172f7618cbc896bb74">BMS.Core.BMS_MultiLog</a>.</p>
 
 </div>
 </div>
@@ -446,7 +488,51 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2">BMS.Core.BMS_ConsoleLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc">BMS.Core.BMS_FileLogger</a>.</p>
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a1ff9d4b61fe643a369120ecc44f522e4">BMS.Core.BMS_MultiLog</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf02d1e508ed7b956f0dc8c04f52ef4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BMS.Core.BMS_Logger.logToWindows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message to the windows event logs </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_logLvl</td><td>The level of this message.</td></tr>
+    <tr><td class="paramname">in_message</td><td>The message to log.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method will not log messages of type TRACE or DEBUG, these types of messages will simply spam the logs.</p>
 
 </div>
 </div>
@@ -504,7 +590,34 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a01c418d17c54a30505128614d6414075">BMS.Core.BMS_ConsoleLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#ae3a4548c9a583b12773e5c36d3043b87">BMS.Core.BMS_FileLogger</a>.</p>
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a01c418d17c54a30505128614d6414075">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#ae3a4548c9a583b12773e5c36d3043b87">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a61c266f445714e678a0af8f29e2ac1fb">BMS.Core.BMS_MultiLog</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04422e20490308120cd3a5e3d505f7d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void BMS.Core.BMS_Logger.shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interface for ensuring the shutdown of the log instance </p>
+
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7030c436fd42c1e683deca419dff48da">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a15d1343067901a147345309782269a47">BMS.Core.BMS_MultiLog</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a5d6df3debe96ba65f078d01282f43ff6">BMS.Core.BMS_FileLogger</a>.</p>
 
 </div>
 </div>
@@ -531,8 +644,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a139552a6872cf0ecc6961f3464e46204"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string BMS.Core.BMS_Logger.m_logName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current logger's name </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Projects/Bad Monkey Software/Software/BME/Core/<a class="el" href="_b_m_s___logger_8cs.html">BMS_Logger.cs</a></li>
+<li>E:/Projects/Bad Monkey Software/Software/BME/Core/Logging/<a class="el" href="_b_m_s___logger_8cs.html">BMS_Logger.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -540,7 +675,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_b_m_s.html">BMS</a></li><li class="navelem"><a class="el" href="namespace_b_m_s_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html">BMS_Logger</a></li>
-    <li class="footer">Generated on Sun Sep 1 2013 02:13:25 for BME.Core by
+    <li class="footer">Generated on Tue Sep 3 2013 00:50:15 for BME.Core by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

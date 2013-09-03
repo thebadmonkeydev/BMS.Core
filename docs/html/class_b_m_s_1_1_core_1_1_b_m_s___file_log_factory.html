@@ -112,6 +112,9 @@ $(document).ready(function(){initNavTree('class_b_m_s_1_1_core_1_1_b_m_s___file_
 <div class="title">BMS.Core.BMS_FileLogFactory Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Factory to create file loggers  
+ <a href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for BMS.Core.BMS_FileLogFactory:</div>
 <div class="dyncontent">
@@ -125,10 +128,12 @@ Inheritance diagram for BMS.Core.BMS_FileLogFactory:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a84ed51b54cd2ddf8e0af9ccef628ffbe"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html">BMS_Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html#a84ed51b54cd2ddf8e0af9ccef628ffbe">create</a> (string in_fileName)</td></tr>
-<tr class="memdesc:a84ed51b54cd2ddf8e0af9ccef628ffbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface method for <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> object creation  <a href="#a84ed51b54cd2ddf8e0af9ccef628ffbe">More...</a><br/></td></tr>
+<tr class="memdesc:a84ed51b54cd2ddf8e0af9ccef628ffbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html" title="Console specific implementation of a logger ">BMS_ConsoleLogger</a> instance.  <a href="#a84ed51b54cd2ddf8e0af9ccef628ffbe">More...</a><br/></td></tr>
 <tr class="separator:a84ed51b54cd2ddf8e0af9ccef628ffbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Factory to create file loggers </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a84ed51b54cd2ddf8e0af9ccef628ffbe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -151,15 +156,21 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Interface method for <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> object creation </p>
-<dl class="section return"><dt>Returns</dt><dd>A specific <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> subtype as a generic <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a>.</dd></dl>
+<p>Creates a new <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html" title="Console specific implementation of a logger ">BMS_ConsoleLogger</a> instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_fileName</td><td>The name associated with this log</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The newly created console log</dd></dl>
 
 <p>Implements <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html#aae44a65a49e0f08985f692d180c0931d">BMS.Core.BMS_LogFactory</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Projects/Bad Monkey Software/Software/BME/Core/<a class="el" href="_b_m_s___file_logger_8cs.html">BMS_FileLogger.cs</a></li>
+<li>E:/Projects/Bad Monkey Software/Software/BME/Core/Logging/<a class="el" href="_b_m_s___file_logger_8cs.html">BMS_FileLogger.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -167,7 +178,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_b_m_s.html">BMS</a></li><li class="navelem"><a class="el" href="namespace_b_m_s_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html">BMS_FileLogFactory</a></li>
-    <li class="footer">Generated on Sun Sep 1 2013 02:13:25 for BME.Core by
+    <li class="footer">Generated on Tue Sep 3 2013 00:50:14 for BME.Core by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

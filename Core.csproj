@@ -28,6 +28,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\Core.XML</DocumentationFile>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Documentation|AnyCPU'">
     <OutputPath>bin\Documentation\</OutputPath>
@@ -54,9 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BMS_ConsoleLogger.cs" />
-    <Compile Include="BMS_FileLogger.cs" />
-    <Compile Include="BMS_Logger.cs" />
+    <Compile Include="Logging\BMS_ConsoleLogger.cs" />
+    <Compile Include="Logging\BMS_FileLogger.cs" />
+    <Compile Include="Logging\BMS_Logger.cs" />
+    <Compile Include="Logging\BMS_MultiLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

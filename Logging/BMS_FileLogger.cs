@@ -5,23 +5,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
 namespace BMS
 {
     namespace Core
     {
+        /// <summary>
+        /// Factory to create file loggers
+        /// </summary>
         public class BMS_FileLogFactory : BMS_LogFactory 
         {
+            /// <summary>
+            /// Creates a new BMS_ConsoleLogger instance.
+            /// </summary>
+            /// <param name="in_fileName">The name associated with this log</param>
+            /// <returns>The newly created console log</returns>
             public override BMS_Logger create(string in_fileName)
             {
-                BMS_FileLogger ret = new BMS_FileLogger();
+                BMS_FileLogger ret = new BMS_FileLogger(in_fileName);
                 ret.setTarget(in_fileName);
 
                 return ret;
             }
         }
 
+        /// <summary>
+        /// File based implementation of the logger
+        /// </summary>
         public class BMS_FileLogger : BMS_Logger
         {
+            
+            //readonly private static string m_moduleId = System.Reflection.Assembly.GetExecutingAssembly().GetType("BMS_FileLogger").Namespace;
+            
+                //GetExecutingAssembly().GetName().Name;
+
+            /// <summary>
+            /// File URI for the log file
+            /// </summary>
             protected string m_fileURI;
 
             /// <summary>
@@ -30,7 +50,8 @@ namespace BMS
             public BMS_FileLogger()
             {   //  Set defaults for a file logger
                 m_curLogLevel = eLogLevel.INFO;
-                m_fileURI = "./log.log";
+                m_fileURI = "./log";
+                m_logName = "LogFile";
             }
 
             /// <summary>
@@ -41,6 +62,7 @@ namespace BMS
             {
                 m_curLogLevel = eLogLevel.INFO;
                 m_fileURI = in_logFileName;
+                m_logName = in_logFileName;
             }
 
             /// <summary>
@@ -52,6 +74,7 @@ namespace BMS
             {
                 m_curLogLevel = in_logLvl;
                 m_fileURI = in_logFileName;
+                m_logName = in_logFileName;
             }
 
             /// <summary>
@@ -74,10 +97,10 @@ namespace BMS
                     logWriter = new StreamWriter(m_fileURI, true);
                     logWriter.WriteLine(timeStamp + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
                     logWriter.Flush();
-                    logWriter.Close();
                 }
                 catch (Exception ex)
                 {
+                    BMS_Logger.broadcast(eLogLevel.ERROR, "Could not write to log (" + m_logName + "):\t" + ex.Message + "\n" + ex.StackTrace);
                 }
                 finally
                 {
@@ -88,6 +111,11 @@ namespace BMS
                 }
             }
 
+            /// <summary>
+            /// Logs a broadcast (system) message, ignoring level filtering
+            /// </summary>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
             public override void logBroadcast(eLogLevel in_logLvl, string in_message)
             {
                 StreamWriter logWriter = null;
@@ -97,10 +125,6 @@ namespace BMS
                     logWriter = new StreamWriter(m_fileURI, true);
                     logWriter.WriteLine(timeStamp + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
                     logWriter.Flush();
-                    logWriter.Close();
-                }
-                catch (Exception ex)
-                {
                 }
                 finally
                 {
@@ -118,6 +142,15 @@ namespace BMS
             public override void setTarget(string in_logTarget)
             {
                 m_fileURI = in_logTarget;
+            }
+
+            /// <summary>
+            /// Shuts down the file logger
+            /// </summary>
+            /// <remarks>Nothing is done here because file handles are created and destroyed for each log message</remarks>
+            public override void shutdown()
+            {
+                //  TODO:   Find more efficient way to handle file handles and ensuring a crash leaves all messages.
             }
         }
     }

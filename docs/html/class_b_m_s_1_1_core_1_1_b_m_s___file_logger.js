@@ -6,5 +6,6 @@ var class_b_m_s_1_1_core_1_1_b_m_s___file_logger =
     [ "log", "class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d", null ],
     [ "logBroadcast", "class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc", null ],
     [ "setTarget", "class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#ae3a4548c9a583b12773e5c36d3043b87", null ],
+    [ "shutdown", "class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a5d6df3debe96ba65f078d01282f43ff6", null ],
     [ "m_fileURI", "class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a76f31e7c9e011c718f8c39f987b9d99b", null ]
 ];
