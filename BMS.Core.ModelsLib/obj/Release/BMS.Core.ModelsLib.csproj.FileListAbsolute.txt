@@ -1,0 +1,5 @@
+E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\obj\Release\BMS.Core.ModelsLib.csprojResolveAssemblyReference.cache
+E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\bin\Release\BMS.Core.ModelsLib.dll
+E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\bin\Release\BMS.Core.ModelsLib.pdb
+E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\obj\Release\BMS.Core.ModelsLib.dll
+E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\obj\Release\BMS.Core.ModelsLib.pdb
