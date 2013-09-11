@@ -66,6 +66,9 @@
   <ItemGroup>
     <None Include="BMS.CoreDevKey.pfx" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
