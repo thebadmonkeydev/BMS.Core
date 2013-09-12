@@ -57,6 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\BMS_Attr_T.cs" />
+    <Compile Include="Configuration\BMS_Config.cs" />
+    <Compile Include="Configuration\BMS_ConfigManager.cs" />
     <Compile Include="Logging\BMS_ConsoleLogger.cs" />
     <Compile Include="Logging\BMS_FileLogger.cs" />
     <Compile Include="Logging\BMS_Logger.cs" />
@@ -66,9 +69,7 @@
   <ItemGroup>
     <None Include="BMS.CoreDevKey.pfx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

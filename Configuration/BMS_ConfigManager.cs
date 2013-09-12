@@ -158,9 +158,13 @@ namespace BMS.Core
         /// Sets the schema with which to validate subsequent config loads
         /// </summary>
         /// <param name="in_schemaName">The name of this schema for filling in the Manager</param>
-        /// <param name="in_fileName">The file name (including full path) to the schema definition.</param>
+        /// <param name="in_fileName">The file name (including full path) to the schema definition or null if accessing a previously stored configuration.</param>
+        /// <remarks>This schema is used to validate all subsequent loads.  No validation is performed
+        /// on previously loaded configurations.</remarks>
         public virtual void setConfigSchemaFile(string in_schemaName, string in_fileName)
         {
+            System.Xml.Schema.XmlSchema schema = new System.Xml.Schema.XmlSchema()
+            
             throw new System.NotImplementedException();
         }
 
