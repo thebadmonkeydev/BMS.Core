@@ -6,38 +6,34 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="High" Text="Code generation or text transformation started." />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="Name = Template1" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="ProjectPath = ..\BMS.Core.ModelsLib\BMS.Core.ModelsLib.csproj" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="TemplateFilePath = " />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="ResolvedTemplateFilePath = " />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Medium" Text="BMS.Core.Models::BMS::Core::BMS_ConfigManager's Text Template Binding: 'Template1' will apply  to: 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) " />
-  <Error Timestamp="2013-09-11T10:44:08" Importance="High" Text="The following Template File Path property for 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) does not exist: " />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class): no file generated because the 'AppliesToElement' method of the template '' evaluated to false." />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="Name = ClassTemplate" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="ProjectPath = ..\BMS.Core.ModelsLib\BMS.Core.ModelsLib.csproj" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="TargetDirectory = Generated Code\{PackageStructure}" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Medium" Text="BMS.Core.Models's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class), 'BMS.Core.Models::BMS::Core::BMS_Config' -  (Class), 'BMS.Core.Models::BMS::Core::BMS_Attr' -  (Class) " />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Medium" Text="'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) : success (file created) - E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\Generated Code\BMS\Core\BMS_ConfigManager.cs" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Medium" Text="'BMS.Core.Models::BMS::Core::BMS_Config' -  (Class) : success (file created) - E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\Generated Code\BMS\Core\BMS_Config.cs" />
-  <Message Timestamp="2013-09-11T10:44:08" Importance="Medium" Text="'BMS.Core.Models::BMS::Core::BMS_Attr' -  (Class) : success (file created) - E:\Projects\Bad Monkey Software\Software\BME\BMS.Core.ModelsLib\Generated Code\BMS\Core\BMS_Attr_T.cs" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="Name = StructTemplate" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="Overwrite = True" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="ProjectPath = ..\BMS.Core.ModelsLib\BMS.Core.ModelsLib.csproj" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Medium" Text="BMS.Core.Models's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class), 'BMS.Core.Models::BMS::Core::BMS_Config' -  (Class), 'BMS.Core.Models::BMS::Core::BMS_Attr' -  (Class) " />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="'BMS.Core.Models::BMS::Core::BMS_Config' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="Diagnostic" Text="'BMS.Core.Models::BMS::Core::BMS_Attr' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
-  <Message Timestamp="2013-09-11T10:44:09" Importance="High" Text="Code generation complete. Errors: 1. Warnings: 0." />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="Name = Template1" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="ProjectPath = ..\BMS.Core.ModelsLib\BMS.Core.ModelsLib.csproj" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TemplateFilePath = " />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="ResolvedTemplateFilePath = " />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Medium" Text="BMS.Core.Models::BMS::Core::BMS_ConfigManager's Text Template Binding: 'Template1' will apply  to: 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) " />
+  <Error Timestamp="2013-09-12T16:16:47" Importance="High" Text="The following Template File Path property for 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) does not exist: " />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class): no file generated because the 'AppliesToElement' method of the template '' evaluated to false." />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="ProjectPath = ..\BMS.Core.ModelsLib\BMS.Core.ModelsLib.csproj" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TargetDirectory = Generated Code\{PackageStructure}" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Medium" Text="BMS.Core.Models's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) " />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Medium" Text="'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) : success (file replaced) - E:\Projects\Bad Monkey Software\Software\BME\Core\BMS.Core.ModelsLib\Generated Code\BMS\Core\BMS_ConfigManager.cs" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="ProjectPath = ..\BMS.Core.ModelsLib\BMS.Core.ModelsLib.csproj" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Medium" Text="BMS.Core.Models's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class) " />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="Diagnostic" Text="'BMS.Core.Models::BMS::Core::BMS_ConfigManager' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2013-09-12T16:16:47" Importance="High" Text="Code generation complete. Errors: 1. Warnings: 0." />
 </Log>

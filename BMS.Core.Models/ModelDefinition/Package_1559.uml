@@ -1400,7 +1400,7 @@
             name="m_configs"
             visibility="Protected"
             isLeaf="false"
-            isStatic="true"
+            isStatic="false"
             isReadOnly="false"
             isDerived="false"
             isDerivedUnion="false"
@@ -1471,13 +1471,185 @@
                 LastKnownLocation="Package_1559.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="b0588180-ef4b-4e91-8688-fadf161da471"
+            name="m_instance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Singleton instance of BMS_ConfigManager</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5a8fbb83-2e90-4bf5-8d5e-28ca91e9f09b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8f08c8d-80fe-4789-816e-c9b8ffc2540e">
+                    <propertyInstance
+                      Id="0b9080f2-7893-433e-8755-531c5693e73c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1eefc828-bea7-4d3c-b2d5-22c226c3a334">
+                    <propertyInstance
+                      Id="d3bccb03-941b-46a6-a9b4-07841cd0f3b6"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="579553a6-ad09-4331-87b6-5daaf9220c52">
+                    <propertyInstance
+                      Id="57e0965a-83d6-45d1-89c4-dffc32122bf4"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80096743-d1b1-46fb-af1f-e53c2ab5bd2c">
+                    <propertyInstance
+                      Id="20052a36-b564-4f21-8072-8adc3c3145f6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31fc1e43-745f-42ea-a7e3-4f0a6b229ba8">
+                    <propertyInstance
+                      Id="fc9fc480-17db-4791-b452-98a844aacb4d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e934eea-21fc-4563-8275-51bc2f53aea3">
+                    <propertyInstance
+                      Id="6b1a2744-6cd9-4e79-8b57-9a82b73eadf4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdfd7d50-50d1-46d9-bda4-c1cc695cb248">
+                    <propertyInstance
+                      Id="2ba4b3d4-10f6-4193-9fd6-8be68544dab8"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="57b46ba0-770a-4be9-a65f-c218cbe89374"
+                LastKnownName="BMS_ConfigManager"
+                LastKnownLocation="Package_1559.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="675dea4e-60da-4930-8c57-e46a48b59326"
+            name="m_logger"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eb33a03f-0668-41e4-8bb0-7f2e53e86c06"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6351f2b-e9d8-4ec3-a2cb-cf4395977b4c">
+                    <propertyInstance
+                      Id="925e07dd-eadd-4359-82d3-4291c9a7e6b4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10308fff-2002-4c33-9550-8f5f9b03556b">
+                    <propertyInstance
+                      Id="fb4db9f3-f8c5-4f2f-b735-8fcb0c7e3488"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d93da26d-7f1b-4dd5-a3da-f1e696824629">
+                    <propertyInstance
+                      Id="b6d897bf-f48f-4c0b-ab65-69ea8c9f8c53"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f6b88d2-3639-4713-81fd-94e166b46252">
+                    <propertyInstance
+                      Id="2533b0d7-0995-4682-93b8-5fbba6d2b5bd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5e4ca99-b0fd-47a3-8d3b-ebfc2d9b1ced">
+                    <propertyInstance
+                      Id="bfa07fa8-d52f-4aec-a665-2d7147a680c5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c76aaa2-3602-4398-8485-d039440905eb">
+                    <propertyInstance
+                      Id="299bd948-6ddf-4f7c-976e-cf86e967a89b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e75c13f-5544-4229-9e02-551a96ed0433">
+                    <propertyInstance
+                      Id="c515770f-512b-4b38-8cd3-c413b9de9977"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="71a1e468-9b4d-479b-9592-0e54b6e495fc"
+                LastKnownName="BMS_Logger"
+                LastKnownLocation="Package_1559.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c55df6e8-5957-4abe-8ced-c0aa63dc221b"
+            name="m_schemas"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="7003f797-a2d9-44f9-b2e3-262f57d09213"
+                LastKnownName="Dictionary&lt;String,XMLSchema&gt;"
+                LastKnownLocation="Package_1559.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="b1a16aba-be98-46e8-a8f1-45b3321147c5"
             name="loadConfigFile"
             isLeaf="false"
-            isStatic="true"
+            isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
@@ -1600,7 +1772,7 @@
             Id="9770c7d1-210c-499c-b293-29ccc695b15a"
             name="saveConfigFile"
             isLeaf="false"
-            isStatic="true"
+            isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
@@ -1690,7 +1862,7 @@
             Id="a1ee5d29-195c-4728-8227-9841ff8e6fe4"
             name="getConfig"
             isLeaf="false"
-            isStatic="true"
+            isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
@@ -1770,6 +1942,234 @@
                       Id="ed55f9a3-18a9-4e52-a488-0c26a56c3e4c"
                       LastKnownName="BMS_Config"
                       LastKnownLocation="Package_1559.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9312b6c0-0570-4836-a4a0-b4f16fc9f629"
+            name="BMS_ConfigManager"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Hidden singleton constructor</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="30dfad3c-d208-48f0-8b6f-f36a95b49792"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bffdc84-1509-449c-900f-1d9862e85e4c">
+                    <propertyInstance
+                      Id="790681bd-4654-4759-9f3e-3c2aa3d19c30"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08b94364-3d42-4635-b837-4dc1f4dd4260">
+                    <propertyInstance
+                      Id="70f57595-82ec-42ac-822a-3ca06d7bff3a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25a53856-b16d-4da1-bdb7-2b4da473076e">
+                    <propertyInstance
+                      Id="6e497ad7-0ee5-40b7-8817-d0a35a30270c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ef7a93f-32c3-4408-ab50-0d802af33465">
+                    <propertyInstance
+                      Id="f7f873e7-0ac8-46c9-888c-05d64a861cd1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd3ab68d-5b96-40f6-b8b5-f8c218e45ff3">
+                    <propertyInstance
+                      Id="3d4d42fe-7f1e-4fb9-8e7e-ad08beddc6a2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ab11b89-e4e1-4e01-8649-2e34d0c56de0">
+                    <propertyInstance
+                      Id="cbeb0cde-cf83-4167-9124-766dac5f4b0f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4dbc30e0-d451-48fc-b9e3-2f1ffa58bc00"
+            name="GetInstance"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Provides access to the singleton BMS_ConfigManager instance</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5b661bc1-041f-42c9-bf07-34e87d022230"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ba39621-c666-4cf1-b29f-e8b1fb3add79">
+                    <propertyInstance
+                      Id="2bffbf00-dfda-4859-9c57-6e5e2e52359a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="124210c8-c8a6-49a5-8ebb-0f8bfd19dc06">
+                    <propertyInstance
+                      Id="3159a375-4bc4-4134-85c2-825d3106d20f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="679bbd80-139b-4720-ae92-747e162a5f3d">
+                    <propertyInstance
+                      Id="59045851-40fa-419d-8aed-81e8b40c1efd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bb6af2e-d9d9-484e-afe0-c04f67870b95">
+                    <propertyInstance
+                      Id="39685d5c-2649-4dd3-b2d1-6ca753a309a6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed60fed3-fba1-4d54-8fb9-86c75847e2dc">
+                    <propertyInstance
+                      Id="56edf9bf-8a98-4c51-a01a-ab8d6cc0b98a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc4bfb07-b080-404b-9375-f1ffeb682a18">
+                    <propertyInstance
+                      Id="a74b4eac-8d97-4608-b3a0-86f568e84a4f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a22017af-29d1-4db3-9c6b-abd6b11b3928"
+                  direction="Return"
+                  isUnique="false">
+                  <description>A reference to the BMS_ConfigManager</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="57b46ba0-770a-4be9-a65f-c218cbe89374"
+                      LastKnownName="BMS_ConfigManager"
+                      LastKnownLocation="Package_1559.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="018afe7d-f745-4f70-90de-adea3793e623"
+            name="setConfigSchemaFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Sets the schema with which to validate subsequent config loads</description>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d815d789-8929-4787-86a5-6bfdae3f33a8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60d6f5f7-0356-4fa4-869b-e2f541bdfefe">
+                    <propertyInstance
+                      Id="61197ced-f279-4e46-94c1-70e2df594702"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f2ce876-3801-485b-9e39-c14c4f711f70">
+                    <propertyInstance
+                      Id="ff6e700c-b46a-451e-89e1-2c7f92afa6eb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ccc249f-ec0e-4c18-ba4c-1c4ca84b8fcf">
+                    <propertyInstance
+                      Id="8749992b-446f-4a29-b107-5ae3c5be37ef"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e2bcc5b-5e50-4aac-b1e2-99824731c824">
+                    <propertyInstance
+                      Id="269b331b-a1a4-40aa-a601-9d2db412a6b1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed51fd3b-38b0-41c7-a30b-61ed1029005e">
+                    <propertyInstance
+                      Id="a5b41299-7437-4971-a88d-8e3ac38fc0df"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c7fa9aa-b5e2-4d55-9c09-96b6a6566507">
+                    <propertyInstance
+                      Id="faa8f770-35a1-4349-ba2b-d906d811321a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9a01c75-2350-4781-9775-ed3cc7002efb"
+                  name="in_schemaName"
+                  direction="In"
+                  isUnique="false">
+                  <description>The name of this schema for filling in the Manager</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="BMS.Core.Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6eea4ebe-11c9-40e9-95af-7b192bbdcff4"
+                  name="in_fileName"
+                  direction="In">
+                  <description>The file name (including full path) to the schema definition.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="BMS.Core.Models.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2013,6 +2413,24 @@
       <undefinedType
         Id="601efae5-c0f0-4c89-9355-8c10804c054e"
         name="Dictionary&lt;String, BMS_Attr&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3b9b8748-ad16-4c8d-9313-6df31b9b6995"
+        name="BadConfigFileException"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="246465e0-95c9-4c01-8ce5-c9eb9323dcb0"
+        name="Dictionary&lt;String," />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7003f797-a2d9-44f9-b2e3-262f57d09213"
+        name="Dictionary&lt;String,XMLSchema&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>
