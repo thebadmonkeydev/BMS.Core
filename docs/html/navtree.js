@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "BME.Core", "index.html", [
+    [ "README", "md__e_1__projects__bad__monkey__software__software__b_m_e__core__r_e_a_d_m_e.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ],
       [ "Package Functions", "namespacemembers.html", [
@@ -16,7 +17,8 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", null ],
+        [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -27,7 +29,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_assembly_info_8cs.html"
+"_b_m_s_8_core_8_models_lib_2_properties_2_assembly_info_8cs.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

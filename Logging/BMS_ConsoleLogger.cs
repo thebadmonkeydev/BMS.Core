@@ -15,6 +15,16 @@ namespace BMS
         /// </summary>
         public class BMS_ConsoleLogFactory : BMS_LogFactory
         {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_ConsoleLogFactory CLass ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x07; }
+            }
+            #endregion
+
             /// <summary>
             /// Creates a new BMS_ConsoleLogger instance.
             /// </summary>
@@ -31,7 +41,22 @@ namespace BMS
         /// </summary>
         public class BMS_ConsoleLogger : BMS_Logger
         {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_ConsolLegger Class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x06; }
+            }
+            #endregion
+
         #region Console Setup
+            /// <summary>
+            /// Width of the console output window
+            /// </summary>
+            private const int m_consoleWidth = 150;
+
             /// <summary>
             /// Locates a console window given the console window name
             /// </summary>
@@ -79,9 +104,14 @@ namespace BMS
             {
                 if (sm_instance == null)
                 {
-                    sm_instance = new BMS_ConsoleLogger(in_fileName);
+                    lock (sync)
+                    {
+                        if (sm_instance == null)
+                        {
+                            sm_instance = new BMS_ConsoleLogger(in_fileName);
+                        }
+                    }
                 }
-
                 return sm_instance;
             }
 
@@ -100,8 +130,10 @@ namespace BMS
                 StreamWriter standardOutput = new StreamWriter(fileStream, encoding);
                 standardOutput.AutoFlush = true;
                 Console.SetOut(standardOutput);
+                Console.WindowWidth = m_consoleWidth;
 
                 m_logName = "console";
+                Console.Title = m_logName;
             }
 
             /// <summary>
@@ -129,6 +161,7 @@ namespace BMS
                     standardOutput.AutoFlush = true;
                     Console.SetOut(standardOutput);
                     Console.Title = in_fileName;
+                    Console.WindowWidth = m_consoleWidth;
                 //}
             }
 
@@ -168,7 +201,18 @@ namespace BMS
             public override void log(eLogLevel in_logLvl, string in_message)
             {
                 //  Console logging does not filter messages (used for debugging)
-                Console.WriteLine(BMS_Logger.getTimeStamp() + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
+                Console.WriteLine(makeLogString(null, in_logLvl, in_message));
+            }
+
+            /// <summary>
+            /// Logs a message to the console log using the provided sender for log tagging
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message</param>
+            /// <param name="in_logLvl">The log level of this message.</param>
+            /// <param name="in_message">The message.</param>
+            public override void log(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                Console.WriteLine(makeLogString(in_sender, in_logLvl, in_message));
             }
 
             /// <summary>
@@ -179,6 +223,17 @@ namespace BMS
             public override void logBroadcast(eLogLevel in_logLvl, string in_message)
             {
                 log(in_logLvl, in_message);
+            }
+
+            /// <summary>
+            /// Logs a broadcast (system) message, ignoring level filtering
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message.</param>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            public override void logBroadcast(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                log(in_sender, in_logLvl, in_message);
             }
 
             /// <summary>
@@ -195,11 +250,14 @@ namespace BMS
             /// </summary>
             public override void shutdown()
             {
-                IntPtr windowHandle = FindWindow(null, m_logName);
-
-                if (windowHandle != IntPtr.Zero)
+                lock (sync)
                 {
-                    ShowWindow(windowHandle, 0);
+                    IntPtr windowHandle = FindWindow(null, m_logName);
+
+                    if (windowHandle != IntPtr.Zero)
+                    {
+                        ShowWindow(windowHandle, 0);
+                    }
                 }
             }
         }

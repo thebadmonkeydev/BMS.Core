@@ -12,14 +12,25 @@ namespace BMS.Core
 	using System.Text;
     using System.Runtime.Serialization;
     using System.Xml;
+    using System.Xml.Schema;
     
 	/// <summary>
 	/// Central manager for all configuration files and settings
 	/// </summary>
-	public class BMS_ConfigManager
+	public class BMS_ConfigManager : BMS_ConfigObject
     {
+        #region Sub-System/Class ID
+        /// <summary>
+        /// BMS_ConfigManager Class ID
+        /// </summary>
+        public override byte CLASS_ID
+        {
+            get { return 0x02; }
+        }
+        #endregion
+
         #region Private Attributes
-        
+
         /// <summary>
         /// Singleton instance of BMS_ConfigManager
         /// </summary>
@@ -42,6 +53,24 @@ namespace BMS.Core
         /// The config sub-system logger
         /// </summary>
         protected virtual BMS_Logger m_logger
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Collection of all schemas used for validating XML configuration files
+        /// </summary>
+        protected virtual Dictionary<String, XmlSchema> m_schemas
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// The current schema used for config file validation
+        /// </summary>
+        protected virtual XmlSchema m_curSchema
         {
             get;
             set;
@@ -73,19 +102,24 @@ namespace BMS.Core
 		public virtual BMS_Config loadConfigFile(string in_configName, string in_fileName)
 		{
             //  Validate good parameters
-            if (string.IsNullOrWhiteSpace(in_configName) || string.IsNullOrWhiteSpace(in_fileName))
+            if (string.IsNullOrWhiteSpace(in_configName))
             {
-                return null;
+                throw new ArgumentException("in_configName cannot be null, empty, or only whitespace");
             }
 
             //  Obtain BMS_Config with which to work
+            m_logger.log(eLogLevel.INFO, "Loading configuration " + in_configName);
+
             BMS_Config newConfig = null;
             if (m_configs.ContainsKey(in_configName))
             {
+                m_logger.log(eLogLevel.INFO, "Config found in manager. Returning.");
                 newConfig = m_configs[in_configName];
+                return newConfig;
             }
             else
             {
+                m_logger.log(eLogLevel.INFO, "Config not found in manager. Loading from file " + in_fileName + ".");
                 newConfig = new BMS_Config();
             }
 
@@ -97,7 +131,9 @@ namespace BMS.Core
             }
             catch (Exception ex)
             {
-                throw new BadConfigFileException("Configuration file " + in_configName + " is bad or inaccessible.", ex);
+                string outString = "Configuration file " + in_configName + " is bad or inaccessible. " + ex.Message;
+                m_logger.log(eLogLevel.ERROR, outString);
+                throw new BadConfigFileException(outString, ex);
             }
 
             //  Obtain and validate root node
@@ -163,9 +199,36 @@ namespace BMS.Core
         /// on previously loaded configurations.</remarks>
         public virtual void setConfigSchemaFile(string in_schemaName, string in_fileName)
         {
-            System.Xml.Schema.XmlSchema schema = new System.Xml.Schema.XmlSchema()
-            
-            throw new System.NotImplementedException();
+            //  Validate parameters
+            if (string.IsNullOrWhiteSpace(in_schemaName))
+            {
+                throw new ArgumentException("in_schemaName cannot be null, empty, or only whitespace");
+            }
+
+            m_logger.log(eLogLevel.INFO, "Setting new schema for config validation...");
+
+            if (m_schemas.ContainsKey(in_schemaName))
+            {
+                m_logger.log(eLogLevel.INFO, "Schema found within Manager. Making current.");
+                m_curSchema = m_schemas[in_schemaName];
+            }
+            else
+            {
+                m_logger.log(eLogLevel.INFO, "Schema not found in Manager. Loading from " + in_fileName + "...");
+                try
+                {
+                    XmlTextReader read = new XmlTextReader(in_fileName);
+                    XmlSchema newSchema = XmlSchema.Read(read, schemaReadCallback);
+                    m_curSchema = newSchema;
+                    m_logger.log(eLogLevel.INFO, "Schema " + in_schemaName + " loaded.");
+                }
+                catch (Exception ex)
+                {
+                    string outString = "Error loading config schema " + in_schemaName;
+                    m_logger.log(eLogLevel.ERROR, outString + " : " + ex.Message);
+                    throw new BadConfigDefException(outString, ex);
+                }
+            }
         }
 
         #endregion
@@ -178,7 +241,40 @@ namespace BMS.Core
 		private BMS_ConfigManager()
 		{
             m_configs = new Dictionary<string, BMS_Config>();
+            m_schemas = new Dictionary<string, XmlSchema>();
+            m_curSchema = null;
+            m_instance = null;
+            m_logger = BMS_Logger.getLogger("BMS_ConfigManager", new BMS_MultiLogFactory());
+            ((BMS_MultiLog)m_logger).addLogger(m_logger.getName() + "/file", new BMS_FileLogFactory());
+#if DEBUG
+            ((BMS_MultiLog)m_logger).addLogger(m_logger.getName() + "/console", new BMS_ConsoleLogFactory());
+#endif
+            //  All configuration messages are logged at TRACE Level
+            m_logger.setLogLevel(eLogLevel.TRACE);
+
+            m_logger.log(eLogLevel.INFO, "Configuration Manager initialized successfully!");
 		}
+
+        /// <summary>
+        /// Schema validation call back
+        /// </summary>
+        /// <param name="sender">The object sending the validation information.</param>
+        /// <param name="args">The arguments regarding this particular validation event.</param>
+        private void schemaReadCallback (object sender, ValidationEventArgs args)
+        {
+            switch (args.Severity)
+            {
+                case XmlSeverityType.Warning:
+                    m_logger.log(eLogLevel.WARN, "Validation warning in configuration schema: " + args.Message);
+                    break;
+
+                case XmlSeverityType.Error:
+                    m_logger.log(eLogLevel.ERROR, "Validation error in configuration schema: " + args.Message);
+                    break;
+            }
+
+            m_logger.log(eLogLevel.INFO, "Configuration schema load completed." + args.Message);
+        }
 
         #endregion
 
@@ -211,6 +307,18 @@ namespace BMS.Core
         public BadConfigFileException(string in_message) : base(in_message){}
         public BadConfigFileException(string in_message, Exception in_innerEx) : base (in_message, in_innerEx){}
         protected BadConfigFileException(SerializationInfo in_serialInfo, StreamingContext in_context){}
+    }
+
+    /// <summary>
+    /// Exception wrapping a mal-formed configuration file definition
+    /// </summary>
+    [Serializable()]
+    public class BadConfigDefException : Exception
+    {
+        public BadConfigDefException() : base() { }
+        public BadConfigDefException(string in_message) : base(in_message) { }
+        public BadConfigDefException(string in_message, Exception in_innerEx) : base(in_message, in_innerEx) { }
+        protected BadConfigDefException(SerializationInfo in_serialInfo, StreamingContext in_context) { }
     }
 
 }

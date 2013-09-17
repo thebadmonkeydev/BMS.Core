@@ -90,8 +90,18 @@ namespace BMS
         /// <summary>
         /// Abstract base class for all BMS_LogFactory implementations.  Provides interface methods.
         /// </summary>
-        public abstract class BMS_LogFactory
-        {   
+        public abstract class BMS_LogFactory : BMS_LoggingObject
+        {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_LogFactory Class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x03; }
+            }
+            #endregion
+
             /// <summary>
             /// Interface method for BMS_Logger object creation
             /// </summary>
@@ -102,18 +112,28 @@ namespace BMS
         /// <summary>
         /// Abstract base class for all BMS_Logger implementations.  Provides interface details and common members as well as current logger containers.
         /// </summary>
-        public abstract class BMS_Logger
+        public abstract class BMS_Logger : BMS_LoggingObject
         {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_Logger class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x02; }
+            }
+            #endregion
 
-        #region Private Members
+
+            #region Private Members
             /// <summary>
             /// Maintains the collection of created loggers
             /// </summary>
             /// <remarks>Represented as Hashtable to provide ~O(1) access based on logger name (hash key)</remarks>
             private static Hashtable m_loggers = new Hashtable();
-        #endregion
+            #endregion
 
-        #region Protected Members
+            #region Protected Members
             /// <summary>
             /// The current logger's message filter level
             /// </summary>
@@ -123,9 +143,9 @@ namespace BMS
             /// The current logger's name
             /// </summary>
             protected string m_logName;
-        #endregion
+            #endregion
 
-        #region Static Methods
+            #region Static Methods
             /// <summary>
             /// Returns a properly formatted time stamp for each log message
             /// </summary>
@@ -133,6 +153,35 @@ namespace BMS
             public static string getTimeStamp()
             {
                 return DateTime.Now.Date.ToShortDateString() + " " + DateTime.Now.TimeOfDay.Hours + ":" + DateTime.Now.TimeOfDay.Minutes + ":" + DateTime.Now.TimeOfDay.Seconds + ":" + DateTime.Now.TimeOfDay.Milliseconds;
+            }
+
+            /// <summary>
+            /// COnstructs a formated log string to be written to the log
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending the message.</param>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message.</param>
+            /// <returns>String constructed as a log message line</returns>
+            /// <remarks>If in_sender is null, the message tagging is omitted.</remarks>
+            public static string makeLogString(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                string ret = "";
+
+                lock (sync)
+                {
+                    string messageID = Guid.NewGuid().ToString();
+
+                    if (null == in_sender)
+                    {
+                        ret = getTimeStamp() + "\t" + messageID + "\tApplication\t0x0000\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message;
+                    }
+                    else
+                    {
+                        ret = getTimeStamp() + "\t" + messageID + "\t" + BMS_Object.getSubSysName(in_sender.SUBSYS_ID) + "\t0x" + in_sender.SUBSYS_ID.ToString("X2") + in_sender.CLASS_ID.ToString("X2") + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message;
+                    }
+                }
+
+                return ret;
             }
 
             /// <summary>
@@ -170,14 +219,18 @@ namespace BMS
             /// <returns>The requested file logger</returns>
             public static BMS_Logger getLogger(string in_logName)
             {
-                BMS_Logger ret = (BMS_Logger)m_loggers[in_logName];
+                BMS_Logger ret = null;
 
-                if (ret == null)
+                lock (sync)
                 {
-                    ret = new BMS_FileLogFactory().create(in_logName);
-                    m_loggers.Add(in_logName, ret);
-                }
+                    ret = (BMS_Logger)m_loggers[in_logName];
 
+                    if (ret == null)
+                    {
+                        ret = new BMS_FileLogFactory().create(in_logName);
+                        m_loggers.Add(in_logName, ret);
+                    }
+                }
                 return ret;
             }
 
@@ -189,12 +242,17 @@ namespace BMS
             /// <returns>The requested Logger.</returns>
             public static BMS_Logger getLogger(string in_logName, BMS_LogFactory in_factory)
             {
-                BMS_Logger ret = (BMS_Logger)m_loggers[in_logName];
+                BMS_Logger ret = null;
 
-                if (ret == null)
+                lock (sync)
                 {
-                    ret = in_factory.create(in_logName);
-                    m_loggers.Add(in_logName, ret);
+                    ret = (BMS_Logger)m_loggers[in_logName];
+
+                    if (ret == null)
+                    {
+                        ret = in_factory.create(in_logName);
+                        m_loggers.Add(in_logName, ret);
+                    }
                 }
 
                 return ret;
@@ -208,9 +266,30 @@ namespace BMS
             /// <remarks>Does not filter log messages.  Global log messages are considered system level messages and will always be logged</remarks>
             public static void broadcast(eLogLevel in_logLvl, string in_message)
             {
-                foreach (DictionaryEntry it in m_loggers)
+                lock (sync)
                 {
-                    ((BMS_Logger)it.Value).logBroadcast(eLogLevel.SYSTEM, in_message);
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).logBroadcast(eLogLevel.SYSTEM, in_message);
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Global log write method.  writes the message to all contained (previously created) logs
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message.</param>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            /// <remarks>Does not filter log messages.  Global log messages are considered system level messages and will always be logged</remarks>
+            public static void broadcast(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                lock (sync)
+                {
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).logBroadcast(in_sender, eLogLevel.SYSTEM, in_message);
+                    }
                 }
             }
 
@@ -247,16 +326,19 @@ namespace BMS
                 EventLog.WriteEntry("BMS.Core", "[BMS_Logger.getLevelTag (in_logLvl)] " + in_message, messageType, 0);
             }
 
-        #endregion
+            #endregion
 
-        #region Public Methods
+            #region Public Methods
             /// <summary>
             /// Set the current log message filter level for this log
             /// </summary>
             /// <param name="in_logLvl">The new log level.</param>
             public void setLogLevel(eLogLevel in_logLvl)
             {
-                m_curLogLevel = in_logLvl;
+                lock (sync)
+                {
+                    m_curLogLevel = in_logLvl;
+                }
             }
 
             /// <summary>
@@ -276,15 +358,23 @@ namespace BMS
             {
                 return m_curLogLevel;
             }
-        #endregion
+            #endregion
 
-        #region Interface Method Definitions
+            #region Interface Method Definitions
             /// <summary>
             /// Interface for writting a message to the log instance
             /// </summary>
             /// <param name="in_logLvl">The level of this message.</param>
             /// <param name="in_message">The message to log.</param>
             abstract public void log(eLogLevel in_logLvl, string in_message);
+
+            /// <summary>
+            /// Interface for writing a message to the log instance using sender information for log tagging
+            /// </summary>
+            /// <param name="in_sender">The class object logging the message.</param>
+            /// <param name="in_logLvl">THe level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            abstract public void log(BMS_Object in_sender, eLogLevel in_logLvl, string in_message);
 
             /// <summary>
             /// Interface to set the log instance's target (specific per log type)
@@ -300,10 +390,18 @@ namespace BMS
             abstract public void logBroadcast(eLogLevel in_logLvl, string in_message);
 
             /// <summary>
+            /// Interface for writing broadcast (system) messages to the log
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message.</param>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            abstract public void logBroadcast(BMS_Object in_sender, eLogLevel in_logLvl, string in_message);
+
+            /// <summary>
             /// Interface for ensuring the shutdown of the log instance
             /// </summary>
             abstract public void shutdown();
-        #endregion
+            #endregion
         }
     }
 }

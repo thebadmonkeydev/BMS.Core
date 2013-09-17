@@ -51,7 +51,6 @@ Global
 		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Debug Documented|Any CPU.ActiveCfg = Debug|Any CPU
 		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Debug Documented|Any CPU.Build.0 = Debug|Any CPU
 		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Documentation|Any CPU.ActiveCfg = Debug|Any CPU
 		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Documentation|Any CPU.Build.0 = Debug|Any CPU
 		{85C4190C-785C-4E2B-99AD-CEB4E1787B31}.Release Documented|Any CPU.ActiveCfg = Release|Any CPU

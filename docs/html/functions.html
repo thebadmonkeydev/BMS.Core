@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -80,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -87,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
@@ -114,7 +117,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -134,8 +137,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>BadConfigDefException()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_bad_config_def_exception.html#a69445b3ca90601c9a3fb144bdaf55bb0">BMS.Core.BadConfigDefException</a>
+</li>
+<li>BadConfigFileException()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_bad_config_file_exception.html#a0fc7146bd0f27f5dbab37e9a8f3b1b7c">BMS.Core.BadConfigFileException</a>
+</li>
+<li>BMS_Config
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a844c7822a35a53785197c29982ea84b0">BMS.Core.BMS_ConfigManager</a>
+</li>
 <li>BMS_FileLogger()
-: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a4af5a9f2c7dfb54a63af58073771cf7c">BMS.Core.BMS_FileLogger</a>
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a35b23ae9c864c71487439c1d23ad3852">BMS.Core.BMS_FileLogger</a>
 </li>
 <li>BMS_MultiLog()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a661d72f6f7a06bfb38da639cb09984d5">BMS.Core.BMS_MultiLog</a>
@@ -147,11 +159,34 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>CLASS_ID
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#a10229de092fbf7a8a25fd76f41a65f58">BMS.Core.BMS_Object</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html#a7f6225af26f78ab8b96f4bb02b544eb4">BMS.Core.BMS_Attr&lt; T &gt;</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#aaa70b47a71e08e171d79055f4d705fe8">BMS.Core.BMS_ConfigManager</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html#a56467c766b9dc4010cb729723f9aa9e1">BMS.Core.BMS_FileLogFactory</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a7537914c9c23d45bb852b807a3989670">BMS.Core.BMS_FileLogger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#aa199464bb28a78bbbe3654b53e2c5187">BMS.Core.BMS_MultiLog</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html#ae68ff7d1a777e8da90737b9547b0f724">BMS.Core.BMS_MultiLogFactory</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html#ae9bb9ceab970cf4cb5811b1f18c499bc">BMS.Core.BMS_LoggingObject</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#aa4b73da5fd4d6bc3764a7d1b5763255f">BMS.Core.BMS_Logger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_object.html#aaa0e079f9af1460f88a9dd79c6f07ee3">BMS.Core.BMS_ConfigObject</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html#a460e3d33f50cfbaf11b5100034c56984">BMS.Core.BMS_LogFactory</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#aa1c277a3ce103412943e4157e835a02e">BMS.Core.BMS_Config</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a8b6c4caf282e9bc6c97c26bb405b2387">BMS.Core.BMS_ConsoleLogger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_log_factory.html#a72bf9ce08ffb2c1b7abf9131bc459f44">BMS.Core.BMS_ConsoleLogFactory</a>
+</li>
 <li>create()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_log_factory.html#a9ff97d90cf6732e3ee3c1b2da1152615">BMS.Core.BMS_ConsoleLogFactory</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html#a84ed51b54cd2ddf8e0af9ccef628ffbe">BMS.Core.BMS_FileLogFactory</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html#a1ab09226f82abdfd13588c6e2f63e1e0">BMS.Core.BMS_MultiLogFactory</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html#aae44a65a49e0f08985f692d180c0931d">BMS.Core.BMS_LogFactory</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_log_factory.html#a84ed51b54cd2ddf8e0af9ccef628ffbe">BMS.Core.BMS_FileLogFactory</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>doesAttrExist()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a9b5c5907752c1acce53f5a5047e22485">BMS.Core.BMS_Config</a>
 </li>
 </ul>
 
@@ -167,17 +202,42 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>get()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a5162a6c63d42fa967bc090edbb221609">BMS.Core.BMS_ConsoleLogger</a>
 </li>
+<li>getAttrType()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html#af3b06acb21b79ac60f52c52c8533b898">BMS.Core.BMS_Attr&lt; T &gt;</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a3c4aa2f663cd778b72c23653d97a4218">BMS.Core.BMS_Config</a>
+</li>
+<li>getBoolVal()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a74bf852df18d7ee40d546435c50c52b0">BMS.Core.BMS_Config</a>
+</li>
+<li>getConfig()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a1167bd511f2f1322ad429562a1df7ffc">BMS.Core.BMS_ConfigManager</a>
+</li>
+<li>getConfigVer()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a2c0a3e9e7bfea003b0edc413c98ea4f2">BMS.Core.BMS_Config</a>
+</li>
+<li>GetInstance()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#aa56d01c13740015f860f52eb40c0507b">BMS.Core.BMS_ConfigManager</a>
+</li>
+<li>getIntVal()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a9672421daf94fcc53f83803cd99bc5e0">BMS.Core.BMS_Config</a>
+</li>
 <li>getLevelTag()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a994ce67c23c15d7d52321ede3ff28f64">BMS.Core.BMS_Logger</a>
 </li>
 <li>getLogger()
-: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#afd14fb9faa2e832bda16a5a5f7df41f1">BMS.Core.BMS_Logger</a>
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a421d2ae8901e8f936fb51dd71c1e1e32">BMS.Core.BMS_Logger</a>
 </li>
 <li>getLogLevel()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#ab6b008ddb14edfc4487e79c69476b66e">BMS.Core.BMS_Logger</a>
 </li>
 <li>getName()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a29c4a9bdff95d501f5870bd3f37587a7">BMS.Core.BMS_Logger</a>
+</li>
+<li>getStringVal()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a601624e2a61cb4a5fd855d123991e2e7">BMS.Core.BMS_Config</a>
+</li>
+<li>getSubSysName()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#ad81e3c2fe0754d2a70df034ca701bd91">BMS.Core.BMS_Object</a>
 </li>
 <li>getTimeStamp()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a8abcf123f46bba68e51a222c0181a76c">BMS.Core.BMS_Logger</a>
@@ -186,17 +246,25 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>loadConfigFile()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a43c8f201bc35457622e9a7d6019deeb3">BMS.Core.BMS_ConfigManager</a>
+</li>
 <li>log()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43">BMS.Core.BMS_ConsoleLogger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d">BMS.Core.BMS_FileLogger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a013ef6e1e62ed2172f7618cbc896bb74">BMS.Core.BMS_MultiLog</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a6acc4243f7d2437a8252840b4668cf84">BMS.Core.BMS_FileLogger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#aa1d5d319c3772fea85b6a29829dfc5a7">BMS.Core.BMS_ConsoleLogger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a97d054fecacfeb7aadae1f60d35016f2">BMS.Core.BMS_Logger</a>
 </li>
 <li>logBroadcast()
-: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc">BMS.Core.BMS_FileLogger</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2">BMS.Core.BMS_ConsoleLogger</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a1ff9d4b61fe643a369120ecc44f522e4">BMS.Core.BMS_MultiLog</a>
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2">BMS.Core.BMS_ConsoleLogger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a15bac4d182e1f00d9c1d9a266fee9be4">BMS.Core.BMS_MultiLog</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a13eb45f0cd3f3d9fa1906fc40cf2b55f">BMS.Core.BMS_Logger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc">BMS.Core.BMS_FileLogger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a359f085927ecbf47266d042787c01254">BMS.Core.BMS_Logger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a1ff9d4b61fe643a369120ecc44f522e4">BMS.Core.BMS_MultiLog</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7512bb1774fa73440f977d414751c22a">BMS.Core.BMS_ConsoleLogger</a>
 </li>
 <li>logToWindows()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#acf02d1e508ed7b956f0dc8c04f52ef4d">BMS.Core.BMS_Logger</a>
@@ -205,11 +273,29 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_attrName
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html#a09ffa1f8af81e15b3f08ca37153e57f9">BMS.Core.BMS_Attr&lt; T &gt;</a>
+</li>
+<li>m_attrValue
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html#a73095bf37d88866044d3aded9dc63089">BMS.Core.BMS_Attr&lt; T &gt;</a>
+</li>
+<li>m_configAttrs
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a8f894e0293f535f2ba2718fcc1344831">BMS.Core.BMS_Config</a>
+</li>
+<li>m_configs
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a2d3daae4d820aa0715e42fd9547c2bcb">BMS.Core.BMS_ConfigManager</a>
+</li>
 <li>m_curLogLevel
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a2a89bc725b72e530c7cb1d8ceb44e74c">BMS.Core.BMS_Logger</a>
 </li>
+<li>m_curSchema
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a658c64e949b795656867c72df6832ce8">BMS.Core.BMS_ConfigManager</a>
+</li>
 <li>m_fileURI
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a76f31e7c9e011c718f8c39f987b9d99b">BMS.Core.BMS_FileLogger</a>
+</li>
+<li>m_logger
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a12d8b9bdbfeb61e8bf7e5c25840a01f8">BMS.Core.BMS_ConfigManager</a>
 </li>
 <li>m_loggers
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a14b535ab12fb99c72858c95e87b6d024">BMS.Core.BMS_MultiLog</a>
@@ -217,26 +303,51 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>m_logName
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a139552a6872cf0ecc6961f3464e46204">BMS.Core.BMS_Logger</a>
 </li>
+<li>m_rawConfig
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#aeb7ee9348026ad7c40ea4d07b505fc29">BMS.Core.BMS_Config</a>
+</li>
+<li>m_schemas
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a00f9463d825bcc47270fce9f8e476875">BMS.Core.BMS_ConfigManager</a>
+</li>
+<li>makeLogString()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#ac24b6ea8294ace87c8c7b7f11c56f52e">BMS.Core.BMS_Logger</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>saveConfigFile()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#ae1eb62d7223c813fcef1f9100e83f2b0">BMS.Core.BMS_ConfigManager</a>
+</li>
+<li>setAttrValue&lt; T &gt;()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config.html#a5f7d96639458ccfbc01083a7f39eee4c">BMS.Core.BMS_Config</a>
+</li>
+<li>setConfigSchemaFile()
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a9e372c5b2778a8a4ac657a9b2e698592">BMS.Core.BMS_ConfigManager</a>
+</li>
 <li>setLogLevel()
 : <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a7e60cb016502c854765ba6b1befc8041">BMS.Core.BMS_Logger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a95aabfd9744aa89bbe199e57bd999db6">BMS.Core.BMS_MultiLog</a>
 </li>
 <li>setTarget()
-: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a01c418d17c54a30505128614d6414075">BMS.Core.BMS_ConsoleLogger</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a100dc51f14f1b5aae05ea04a8b366af2">BMS.Core.BMS_MultiLog</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#ae3a4548c9a583b12773e5c36d3043b87">BMS.Core.BMS_FileLogger</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a61c266f445714e678a0af8f29e2ac1fb">BMS.Core.BMS_MultiLog</a>
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#ae3a4548c9a583b12773e5c36d3043b87">BMS.Core.BMS_FileLogger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#af494d7578070ae9b6d779c9ecc0392d7">BMS.Core.BMS_Logger</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a61c266f445714e678a0af8f29e2ac1fb">BMS.Core.BMS_MultiLog</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a01c418d17c54a30505128614d6414075">BMS.Core.BMS_ConsoleLogger</a>
 </li>
 <li>shutdown()
-: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7030c436fd42c1e683deca419dff48da">BMS.Core.BMS_ConsoleLogger</a>
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a04422e20490308120cd3a5e3d505f7d3">BMS.Core.BMS_Logger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a5d6df3debe96ba65f078d01282f43ff6">BMS.Core.BMS_FileLogger</a>
-, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a04422e20490308120cd3a5e3d505f7d3">BMS.Core.BMS_Logger</a>
 , <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a15d1343067901a147345309782269a47">BMS.Core.BMS_MultiLog</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7030c436fd42c1e683deca419dff48da">BMS.Core.BMS_ConsoleLogger</a>
+</li>
+<li>SUBSYS_ID
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#a57de3c9a27b2e7a31010b0a1ec363717">BMS.Core.BMS_Object</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html#a637a3a3e5a186fa218c141946d83847f">BMS.Core.BMS_LoggingObject</a>
+, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___config_object.html#a33f805d46633afbdfc83a3512a1dd17b">BMS.Core.BMS_ConfigObject</a>
+</li>
+<li>sync
+: <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#aaf38f333e9f4e8181997d56734875967">BMS.Core.BMS_Object</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -244,7 +355,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Sep 11 2013 10:34:21 for BME.Core by
+    <li class="footer">Generated on Tue Sep 17 2013 13:04:19 for BME.Core by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

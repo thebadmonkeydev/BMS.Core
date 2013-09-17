@@ -14,8 +14,18 @@ namespace BMS.Core
 	/// <summary>
 	/// Wraps a configuration attribute
 	/// </summary>
-	public class BMS_Attr<T>
+	public class BMS_Attr<T> : BMS_ConfigObject
 	{
+        #region Sub-System/Class ID
+        /// <summary>
+        /// BMS_Attr Class ID
+        /// </summary>
+        public override byte CLASS_ID
+        {
+            get { return 0x04; }
+        }
+        #endregion
+
 		/// <summary>
 		/// The name of this attribute
 		/// </summary>

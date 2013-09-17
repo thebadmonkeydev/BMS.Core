@@ -10,12 +10,23 @@ namespace BMS.Core
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
+    using System.Xml;
 
 	/// <summary>
 	/// Wraps a single instance of a configuration (analogous to a config file in memory)
 	/// </summary>
-	public class BMS_Config
+	public class BMS_Config : BMS_ConfigObject
 	{
+        #region Sub-System/Class ID
+        /// <summary>
+        /// BMS_Config Class ID
+        /// </summary>
+        public override byte CLASS_ID
+        {
+            get { return 0x03; }
+        }
+        #endregion
+
 		/// <summary>
 		/// The raw configuration, used to provide easy read/write-back to disc.
 		/// </summary>
@@ -28,7 +39,7 @@ namespace BMS.Core
 		/// <summary>
 		/// Attr names can contain tree-like entries to access sub attrs (i.e. LoggingConfig/DefaultLogLevel)
 		/// </summary>
-		protected virtual Dictionary<String, BMS_Attr> m_configAttrs
+		protected virtual Dictionary<String, BMS_Attr<object>> m_configAttrs
 		{
 			get;
 			set;

@@ -1937,6 +1937,11 @@
                     <elementDefinition Id="3b9b8748-ad16-4c8d-9313-6df31b9b6995" />
                   </class>
                 </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="91f718d2-821c-4e99-ad44-8cdd428b4ebe" name="BMS_ConfigSchema" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="39c53e36-a454-45cc-8fe7-6667c908625c" />
+                  </class>
+                </packageHasNamedElement>
               </packagedElements>
             </package>
           </packageHasNamedElement>
