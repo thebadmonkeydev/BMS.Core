@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bms_config_schema"
+    targetNamespace="http://tempuri.org/bms_config_schema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/bms_config_schema.xsd"
+    xmlns:mstns="http://tempuri.org/bms_config_schema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="logging" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="level" maxOccurs="1" default="INFO" type="xs:string" />
+              <xs:element name="defaultDir" maxOccurs="1" default="./Log" type="xs:string" />
+              <xs:element name="rollover" maxOccurs="1" default="APPEND">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="period" maxOccurs="1" default="1" type
+                  </xs:sequence>
+                  <xs:attribute name="type" default="APPEND" use="optional">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="APPEND" />
+                        <xs:enumeration value="OVERWRITE" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="logger" type="logger" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+          <xs:complexType>
+
+            <xs:attribute name="module" type="xs:string" use="required" />
+            <xs:attribute name="level" type="xs:string" use="optional">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="TRACE|DEBUG|INFO|WARN|ERROR|NONE" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="logger">
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="type" default="FILE" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FILE" />
+          <xs:enumeration value="CONSOLE" />
+          <xs:enumeration value="NET" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="level" default="INFO" use="optional">
+      <xs:simpleType>
+        <xs:restriction base ="xs:string">
+          <xs:enumeration value="TRACE" />
+          <xs:enumeration value="DEBUG" />
+          <xs:enumeration value="INFO" />
+          <xs:enumeration value="WARN" />
+          <xs:enumeration value="ERROR" />
+          <xs:enumeration value="NONE" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="target" type="xs:string" use="required" />
+    <xs:attribute name="rollover" default="1" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="1" />
+          <xs:maxInclusive value="180" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute> 
+  </xs:complexType>
+</xs:schema>

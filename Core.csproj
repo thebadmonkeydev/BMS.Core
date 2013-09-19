@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BMS.CoreDevKey.pfx" />
+    <None Include="bms_config_schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Util\" />

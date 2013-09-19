@@ -137,7 +137,7 @@ namespace BMS.Core
             }
 
             //  Obtain and validate root node
-            XmlNode root = configFile.SelectSingleNode("/BMSConfig");
+            XmlNode root = configFile.SelectSingleNode("/bmsconfig");
             if (null == root)
             {
                 throw new BadConfigFileException("Configuration file " + in_configName + " is not a BMS configuration file.");
@@ -249,7 +249,7 @@ namespace BMS.Core
 #if DEBUG
             ((BMS_MultiLog)m_logger).addLogger(m_logger.getName() + "/console", new BMS_ConsoleLogFactory());
 #endif
-            //  All configuration messages are logged at TRACE Level
+            //  All configuration messages are logged at TRACE Level during config loading
             m_logger.setLogLevel(eLogLevel.TRACE);
 
             m_logger.log(eLogLevel.INFO, "Configuration Manager initialized successfully!");
