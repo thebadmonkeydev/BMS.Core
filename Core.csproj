@@ -62,6 +62,7 @@
     <Compile Include="Configuration\BMS_Config.cs" />
     <Compile Include="Configuration\BMS_ConfigManager.cs" />
     <Compile Include="Configuration\BMS_ConfigObject.cs" />
+    <Compile Include="Configuration\BMS_Setting.cs" />
     <Compile Include="Logging\BMS_ConsoleLogger.cs" />
     <Compile Include="Logging\BMS_FileLogger.cs" />
     <Compile Include="Logging\BMS_Logger.cs" />

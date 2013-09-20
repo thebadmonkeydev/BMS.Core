@@ -32,6 +32,36 @@
             get;
             set;
         }
+
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public BMS_Attr()
+        {
+            Name = "";
+            Value = "";
+        }
+
+        /// <summary>
+        /// Name initialized constructor
+        /// </summary>
+        /// <param name="in_name">The <seealso cref="BMS_Attr"/>'s name</param>
+        public BMS_Attr(string in_name)
+        {
+            Name = in_name;
+            Value = "";
+        }
+
+        /// <summary>
+        /// Name and Value initialized constructor
+        /// </summary>
+        /// <param name="in_name">The name of the new <seealso cref="BMS_Attr"/>.</param>
+        /// <param name="in_value">The value of this <seealso cref="BMS_Attr"/>.</param>
+        public BMS_Attr(string in_name, string in_value)
+        {
+            Name = in_name;
+            Value = in_value;
+        }
     }
 }
 

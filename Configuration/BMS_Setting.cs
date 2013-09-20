@@ -153,6 +153,42 @@ namespace BMS.Core
             m_attrs.Values.CopyTo(ret, 0);
             return ret;
 		}
+
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public BMS_Setting()
+        {
+            m_attrs = new Dictionary<string, BMS_Attr>();
+            m_children = new Dictionary<string, BMS_Setting>();
+            m_name = "";
+            m_value = "";
+        }
+
+        /// <summary>
+        /// Name initialized Constructor
+        /// </summary>
+        /// <param name="in_name">The name of the new BMS_Setting</param>
+        public BMS_Setting(string in_name)
+        {
+            m_attrs = new Dictionary<string, BMS_Attr>();
+            m_children = new Dictionary<string, BMS_Setting>();
+            m_name = in_name;
+            m_value = "";
+        }
+
+        /// <summary>
+        /// Name and Value initialized constructor
+        /// </summary>
+        /// <param name="in_name">The name of the new BMS_Setting.</param>
+        /// <param name="in_value">The value of the new BMS_Setting.</param>
+        public BMS_Setting(string in_name, string in_value)
+        {
+            m_attrs = new Dictionary<string, BMS_Attr>();
+            m_children = new Dictionary<string, BMS_Setting>();
+            m_name = in_name;
+            m_value = in_value;
+        }
 	}
 }
 
