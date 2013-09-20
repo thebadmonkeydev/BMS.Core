@@ -88,7 +88,7 @@
         </packageShape>
       </nestedChildShapes>
     </packageShape>
-    <associationConnector edgePoints="[(9.25 : 9.93962091237307); (10.625 : 9.93962091237307)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+    <associationConnector edgePoints="[(9.25 : 9.93962091237307); (10.625 : 9.93962091237307)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
       <associationMoniker Id="422127b0-2f7d-43f4-9ab9-d497220873e4" />
       <relativeChildShapes />
       <nodes>
@@ -96,7 +96,7 @@
         <classShapeMoniker Id="44823ccf-5575-4f78-a408-12f3d0346253" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.25 : 8.00424182474613); (7.25 : 8.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+    <associationConnector edgePoints="[(7.25 : 8.00424182474613); (7.25 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
       <associationMoniker Id="7218b0b3-a504-439b-9815-aabce2f9806c" />
       <relativeChildShapes />
       <nodes>
@@ -128,7 +128,7 @@
         <classShapeMoniker Id="449afcd0-d540-4d27-90eb-814bcb6904e2" />
       </nodes>
     </generalizationConnector>
-    <associationConnector edgePoints="[(3.625 : 2.53113279139002); (2.25 : 2.53113279139002)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
+    <associationConnector edgePoints="[(3.625 : 2.53113279139002); (2.25 : 2.53113279139002)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="*">
       <associationMoniker Id="567135b8-0020-4d02-8d69-36854066d03b" />
       <relativeChildShapes />
       <nodes>

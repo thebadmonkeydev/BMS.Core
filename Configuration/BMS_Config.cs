@@ -39,7 +39,7 @@ namespace BMS.Core
 		/// <summary>
 		/// Attr names can contain tree-like entries to access sub attrs (i.e. LoggingConfig/DefaultLogLevel)
 		/// </summary>
-		protected virtual Dictionary<String, BMS_Attr<object>> m_configAttrs
+		protected virtual Dictionary<String, BMS_Attr> m_configAttrs
 		{
 			get;
 			set;
@@ -67,7 +67,7 @@ namespace BMS.Core
 		/// </summary>
 		/// <param name="in_attrName">The name of the attribute to modify</param>
 		/// <param name="in_val">The new value for the attribute</param>
-		public virtual void setAttrValue<T>(string in_attrName, T in_val)
+		public virtual void setAttrValue(string in_attrName, string in_val)
 		{
 			throw new System.NotImplementedException();
 		}
