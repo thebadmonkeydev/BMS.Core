@@ -2,9 +2,10 @@ var hierarchy =
 [
     [ "BMS.Core.BMS_Object", "class_b_m_s_1_1_core_1_1_b_m_s___object.html", [
       [ "BMS.Core.BMS_ConfigObject", "class_b_m_s_1_1_core_1_1_b_m_s___config_object.html", [
-        [ "BMS.Core.BMS_Attr< T >", "class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html", null ],
+        [ "BMS.Core.BMS_Attr", "class_b_m_s_1_1_core_1_1_b_m_s___attr.html", null ],
         [ "BMS.Core.BMS_Config", "class_b_m_s_1_1_core_1_1_b_m_s___config.html", null ],
-        [ "BMS.Core.BMS_ConfigManager", "class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html", null ]
+        [ "BMS.Core.BMS_ConfigManager", "class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html", null ],
+        [ "BMS.Core.BMS_Setting", "class_b_m_s_1_1_core_1_1_b_m_s___setting.html", null ]
       ] ],
       [ "BMS.Core.BMS_LoggingObject", "class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html", [
         [ "BMS.Core.BMS_LogFactory", "class_b_m_s_1_1_core_1_1_b_m_s___log_factory.html", [

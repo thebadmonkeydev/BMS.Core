@@ -5,10 +5,11 @@ var searchData=
   ['badconfigfileexception',['BadConfigFileException',['../class_b_m_s_1_1_core_1_1_bad_config_file_exception.html',1,'BMS::Core']]],
   ['badconfigfileexception',['BadConfigFileException',['../class_b_m_s_1_1_core_1_1_bad_config_file_exception.html#ad981fe3a094c7b1b58fae18347c30c62',1,'BMS.Core.BadConfigFileException.BadConfigFileException()'],['../class_b_m_s_1_1_core_1_1_bad_config_file_exception.html#a8c03ab4d531fd311100e58b3e63a314e',1,'BMS.Core.BadConfigFileException.BadConfigFileException(string in_message)'],['../class_b_m_s_1_1_core_1_1_bad_config_file_exception.html#ac3a8225cd972bae186c624ed97e9f84b',1,'BMS.Core.BadConfigFileException.BadConfigFileException(string in_message, Exception in_innerEx)'],['../class_b_m_s_1_1_core_1_1_bad_config_file_exception.html#a0fc7146bd0f27f5dbab37e9a8f3b1b7c',1,'BMS.Core.BadConfigFileException.BadConfigFileException(SerializationInfo in_serialInfo, StreamingContext in_context)']]],
   ['bms',['BMS',['../namespace_b_m_s.html',1,'']]],
+  ['bms_5fattr',['BMS_Attr',['../class_b_m_s_1_1_core_1_1_b_m_s___attr.html#a094d83c13e6afd90acd3da473c30888b',1,'BMS.Core.BMS_Attr.BMS_Attr()'],['../class_b_m_s_1_1_core_1_1_b_m_s___attr.html#ae748d3828fd2c5eb34577b56dc6a5eff',1,'BMS.Core.BMS_Attr.BMS_Attr(string in_name)'],['../class_b_m_s_1_1_core_1_1_b_m_s___attr.html#a96cc7e18259cc8c0e1c8bdac64a48088',1,'BMS.Core.BMS_Attr.BMS_Attr(string in_name, string in_value)']]],
+  ['bms_5fattr',['BMS_Attr',['../class_b_m_s_1_1_core_1_1_b_m_s___attr.html',1,'BMS::Core']]],
   ['bms_5fattr_2ecs',['BMS_Attr.cs',['../_b_m_s___attr_8cs.html',1,'']]],
-  ['bms_5fattr_3c_20t_20_3e',['BMS_Attr&lt; T &gt;',['../class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html',1,'BMS::Core']]],
+  ['bms_5fconfig',['BMS_Config',['../class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a844c7822a35a53785197c29982ea84b0',1,'BMS.Core.BMS_ConfigManager.BMS_Config()'],['../class_b_m_s_1_1_core_1_1_b_m_s___config.html#a3ebf4d9b05fd519deccbecc0e23618da',1,'BMS.Core.BMS_Config.BMS_Config()']]],
   ['bms_5fconfig',['BMS_Config',['../class_b_m_s_1_1_core_1_1_b_m_s___config.html',1,'BMS::Core']]],
-  ['bms_5fconfig',['BMS_Config',['../class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html#a844c7822a35a53785197c29982ea84b0',1,'BMS::Core::BMS_ConfigManager']]],
   ['bms_5fconfig_2ecs',['BMS_Config.cs',['../_b_m_s___config_8cs.html',1,'']]],
   ['bms_5fconfigmanager',['BMS_ConfigManager',['../class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html',1,'BMS::Core']]],
   ['bms_5fconfigmanager_2ecs',['BMS_ConfigManager.cs',['../_b_m_s___config_manager_8cs.html',1,'']]],
@@ -32,6 +33,9 @@ var searchData=
   ['bms_5fmultilogfactory',['BMS_MultiLogFactory',['../class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html',1,'BMS::Core']]],
   ['bms_5fobject',['BMS_Object',['../class_b_m_s_1_1_core_1_1_b_m_s___object.html',1,'BMS::Core']]],
   ['bms_5fobject_2ecs',['BMS_Object.cs',['../_b_m_s___object_8cs.html',1,'']]],
+  ['bms_5fsetting',['BMS_Setting',['../class_b_m_s_1_1_core_1_1_b_m_s___setting.html',1,'BMS::Core']]],
+  ['bms_5fsetting',['BMS_Setting',['../class_b_m_s_1_1_core_1_1_b_m_s___setting.html#a002d4005f63a07756fead1784a74462b',1,'BMS.Core.BMS_Setting.BMS_Setting()'],['../class_b_m_s_1_1_core_1_1_b_m_s___setting.html#acd24708193737e301e145be66beae8c4',1,'BMS.Core.BMS_Setting.BMS_Setting(string in_name)'],['../class_b_m_s_1_1_core_1_1_b_m_s___setting.html#ad600a3b5b083193c31e9740264ddf44d',1,'BMS.Core.BMS_Setting.BMS_Setting(string in_name, string in_value)']]],
+  ['bms_5fsetting_2ecs',['BMS_Setting.cs',['../_b_m_s___setting_8cs.html',1,'']]],
   ['broadcast',['broadcast',['../class_b_m_s_1_1_core_1_1_b_m_s___logger.html#aa1806fcef246153a42044f6afcb75177',1,'BMS.Core.BMS_Logger.broadcast(eLogLevel in_logLvl, string in_message)'],['../class_b_m_s_1_1_core_1_1_b_m_s___logger.html#af76550775ebdb68f5ebf777f4249deef',1,'BMS.Core.BMS_Logger.broadcast(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)']]],
   ['core',['Core',['../namespace_b_m_s_1_1_core.html',1,'BMS']]]
 ];

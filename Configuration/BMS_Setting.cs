@@ -5,8 +5,18 @@ namespace BMS.Core
     /// <summary>
 	/// Wraps a configuration attribute
 	/// </summary>
-	public class BMS_Setting
+	public class BMS_Setting : BMS_ConfigObject
 	{
+        #region Sub-System/Class ID
+        /// <summary>
+        /// BMS_FileLogFactory Class ID
+        /// </summary>
+        public override byte CLASS_ID
+        {
+            get { return 0x05; }
+        }
+        #endregion
+
 		/// <summary>
 		/// The name of this setting
 		/// </summary>
@@ -120,12 +130,13 @@ namespace BMS.Core
 		/// <summary>
 		/// Retrieves a specific child setting
 		/// </summary>
-		/// <param name="in_childName">The name of the child setting to retrieve</param>
+		/// <param name="in_childName">The local name of the child setting to retrieve</param>
 		public virtual BMS_Setting getChild(string in_childName)
-		{
-            if (m_children.ContainsKey(in_childName))
+        {
+            string qualName = m_name + "." + in_childName;
+            if (m_children.ContainsKey(qualName))
             {
-                return m_children[in_childName];
+                return m_children[qualName];
             }
             else
             {
@@ -143,6 +154,18 @@ namespace BMS.Core
             m_children.Values.CopyTo(ret, 0);
             return ret;
 		}
+
+        /// <summary>
+        /// Adds a child setting
+        /// </summary>
+        /// <param name="in_child">The new child</param>
+        public virtual void addChild(BMS_Setting in_child)
+        {
+            if (!m_children.ContainsKey(in_child.getName()))
+            {
+                m_children.Add(in_child.getName(), in_child);
+            }
+        }
 
 		/// <summary>
 		/// Retrieves all attributes of this setting
