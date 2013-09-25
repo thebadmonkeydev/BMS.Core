@@ -39,12 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generated Code\BMS\Core\BMS_Attr_T.cs" />
-    <Compile Include="Generated Code\BMS\Core\BMS_Config.cs" />
-    <Compile Include="Generated Code\BMS\Core\BMS_ConfigManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Generated Code\BMS\Core\" />
     <Folder Include="GeneratedCode\BMS\Core\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

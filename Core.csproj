@@ -57,17 +57,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BMS_Object.cs" />
+    <Compile Include="Configuration\BMS_Attr.cs" />
+    <Compile Include="Configuration\BMS_Config.cs" />
+    <Compile Include="Configuration\BMS_ConfigManager.cs" />
+    <Compile Include="Configuration\BMS_ConfigObject.cs" />
+    <Compile Include="Configuration\BMS_Setting.cs" />
     <Compile Include="Logging\BMS_ConsoleLogger.cs" />
     <Compile Include="Logging\BMS_FileLogger.cs" />
     <Compile Include="Logging\BMS_Logger.cs" />
+    <Compile Include="Logging\BMS_LoggingObject.cs" />
     <Compile Include="Logging\BMS_MultiLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BMS.CoreDevKey.pfx" />
+    <None Include="bms_config_schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configuration\" />
+    <Folder Include="Util\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

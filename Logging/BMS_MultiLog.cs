@@ -14,6 +14,16 @@ namespace BMS
         /// </summary>
         public class BMS_MultiLogFactory : BMS_LogFactory
         {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_MultiLogFactory Class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x09; }
+            }
+            #endregion
+
             /// <summary>
             /// Creates a new BMS_MultiLog instance
             /// </summary>
@@ -32,6 +42,16 @@ namespace BMS
         /// </summary>
         public class BMS_MultiLog : BMS_Logger
         {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_MultiLog Class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x08; }
+            }
+            #endregion
+
             /// <summary>
             /// Collection of loggers using hash mapping for O(1) access by name key
             /// </summary>
@@ -55,9 +75,12 @@ namespace BMS
                 if (m_loggers.Contains(in_logName))
                     return;
 
-                BMS_Logger logger = BMS_Logger.getLogger(in_logName);
+                lock (sync)
+                {
+                    BMS_Logger logger = new BMS_FileLogFactory().create(in_logName);
 
-                m_loggers.Add(in_logName, logger);
+                    m_loggers.Add(in_logName, logger);
+                }
             }
 
             /// <summary>
@@ -70,9 +93,12 @@ namespace BMS
                 if (m_loggers.Contains(in_logName))
                     return;
 
-                BMS_Logger logger = BMS_Logger.getLogger(in_logName, in_logFactory);
+                lock (sync)
+                {
+                    BMS_Logger logger = in_logFactory.create(in_logName);
 
-                m_loggers.Add(in_logName, logger);
+                    m_loggers.Add(in_logName, logger);
+                }
             }
 
             /// <summary>
@@ -82,9 +108,29 @@ namespace BMS
             /// <param name="in_message">The message to log.</param>
             public override void log(eLogLevel in_logLvl, string in_message)
             {
-                foreach (DictionaryEntry it in m_loggers)
+                lock (sync)
                 {
-                    ((BMS_Logger)it.Value).log(in_logLvl, in_message);
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).log(in_logLvl, in_message);
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Writes a message to all logs within this logger using the provided sender for message tagging.
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message</param>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            public override void log(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                lock (sync)
+                {
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).log(in_sender, in_logLvl, in_message);
+                    }
                 }
             }
 
@@ -95,9 +141,28 @@ namespace BMS
             /// <param name="in_message">The message to log.</param>
             public override void logBroadcast(eLogLevel in_logLvl, string in_message)
             {
-                foreach (DictionaryEntry it in m_loggers)
+                lock (sync)
                 {
-                    ((BMS_Logger)it.Value).logBroadcast(in_logLvl, in_message);
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).logBroadcast(in_logLvl, in_message);
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Writes a broadcast (system) message to all logs within this logger
+            /// </summary>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            public override void logBroadcast(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                lock (sync)
+                {
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).logBroadcast(in_sender, in_logLvl, in_message);
+                    }
                 }
             }
 
@@ -107,9 +172,12 @@ namespace BMS
             /// <param name="in_logTarget">The new log target.</param>
             public override void setTarget(string in_logTarget)
             {
-                foreach (DictionaryEntry it in m_loggers)
+                lock (sync)
                 {
-                    ((BMS_Logger)it.Value).setTarget(in_logTarget);
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).setTarget(in_logTarget);
+                    }
                 }
             }
 
@@ -120,9 +188,12 @@ namespace BMS
             /// <param name="in_logTarget">The new log target.</param>
             public void setTarget(string in_logName, string in_logTarget)
             {
-                if (m_loggers.Contains(in_logName))
+                lock (sync)
                 {
-                    ((BMS_Logger)m_loggers[in_logName]).setTarget(in_logTarget);
+                    if (m_loggers.Contains(in_logName))
+                    {
+                        ((BMS_Logger)m_loggers[in_logName]).setTarget(in_logTarget);
+                    }
                 }
             }
 
@@ -132,9 +203,12 @@ namespace BMS
             /// <param name="in_logLvl">The new log filter level.</param>
             new public void setLogLevel(eLogLevel in_logLvl)
             {
-                foreach (DictionaryEntry it in m_loggers)
+                lock (sync)
                 {
-                    ((BMS_Logger)it.Value).setLogLevel(in_logLvl);
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).setLogLevel(in_logLvl);
+                    }
                 }
             }
 
@@ -145,9 +219,12 @@ namespace BMS
             /// <param name="in_logLvl">The new log filter level.</param>
             public void setLogLevel(string in_logName, eLogLevel in_logLvl)
             {
-                if (m_loggers.Contains(in_logName))
+                lock (sync)
                 {
-                    ((BMS_Logger)m_loggers[in_logName]).setLogLevel(in_logLvl);
+                    if (m_loggers.Contains(in_logName))
+                    {
+                        ((BMS_Logger)m_loggers[in_logName]).setLogLevel(in_logLvl);
+                    }
                 }
             }
 
@@ -156,12 +233,15 @@ namespace BMS
             /// </summary>
             public override void shutdown()
             {
-                foreach (DictionaryEntry it in m_loggers)
+                lock (sync)
                 {
-                    ((BMS_Logger)it.Value).shutdown();
-                }
+                    foreach (DictionaryEntry it in m_loggers)
+                    {
+                        ((BMS_Logger)it.Value).shutdown();
+                    }
 
-                m_loggers.Clear();
+                    m_loggers.Clear();
+                }
             }
         }
     }

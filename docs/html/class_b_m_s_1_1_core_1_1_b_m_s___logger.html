@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('class_b_m_s_1_1_core_1_1_b_m_s___logge
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,6 +110,7 @@ $(document).ready(function(){initNavTree('class_b_m_s_1_1_core_1_1_b_m_s___logge
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_b_m_s_1_1_core_1_1_b_m_s___logger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BMS.Core.BMS_Logger Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -120,14 +122,17 @@ $(document).ready(function(){initNavTree('class_b_m_s_1_1_core_1_1_b_m_s___logge
 <div class="dynheader">
 Inheritance diagram for BMS.Core.BMS_Logger:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_b_m_s_1_1_core_1_1_b_m_s___logger.png" usemap="#BMS.Core.BMS_Logger_map" alt=""/>
-  <map id="BMS.Core.BMS_Logger_map" name="BMS.Core.BMS_Logger_map">
-<area href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html" title="Console specific implementation of a logger " alt="BMS.Core.BMS_ConsoleLogger" shape="rect" coords="0,56,195,80"/>
-<area href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html" title="File based implementation of the logger " alt="BMS.Core.BMS_FileLogger" shape="rect" coords="205,56,400,80"/>
-<area href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html" title="Provides the ability to group logs within a single log instance " alt="BMS.Core.BMS_MultiLog" shape="rect" coords="410,56,605,80"/>
-</map>
- </div></div>
+<div class="center"><img src="class_b_m_s_1_1_core_1_1_b_m_s___logger__inherit__graph.png" border="0" usemap="#_b_m_s_8_core_8_b_m_s___logger_inherit__map" alt="Inheritance graph"/></div>
+<map name="_b_m_s_8_core_8_b_m_s___logger_inherit__map" id="_b_m_s_8_core_8_b_m_s___logger_inherit__map">
+<area shape="rect" id="node4" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html" title="Console specific implementation of a logger " alt="" coords="5,229,213,256"/><area shape="rect" id="node5" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html" title="File based implementation of the logger " alt="" coords="238,229,420,256"/><area shape="rect" id="node6" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html" title="Provides the ability to group logs within a single log instance " alt="" coords="445,229,616,256"/><area shape="rect" id="node2" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html" title="Base class for all logging sub system classes " alt="" coords="259,80,400,107"/><area shape="rect" id="node3" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html" title="Base class for all BMS enterprise classes " alt="" coords="281,5,377,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for BMS.Core.BMS_Logger:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_b_m_s_1_1_core_1_1_b_m_s___logger__coll__graph.png" border="0" usemap="#_b_m_s_8_core_8_b_m_s___logger_coll__map" alt="Collaboration graph"/></div>
+<map name="_b_m_s_8_core_8_b_m_s___logger_coll__map" id="_b_m_s_8_core_8_b_m_s___logger_coll__map">
+<area shape="rect" id="node2" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html" title="Base class for all logging sub system classes " alt="" coords="15,80,156,107"/><area shape="rect" id="node3" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html" title="Base class for all BMS enterprise classes " alt="" coords="37,5,133,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,12 +148,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a97d054fecacfeb7aadae1f60d35016f2"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a97d054fecacfeb7aadae1f60d35016f2">log</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
 <tr class="memdesc:a97d054fecacfeb7aadae1f60d35016f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for writting a message to the log instance  <a href="#a97d054fecacfeb7aadae1f60d35016f2">More...</a><br/></td></tr>
 <tr class="separator:a97d054fecacfeb7aadae1f60d35016f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd575f47e8634ddaf8492a43bd54000"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a9fd575f47e8634ddaf8492a43bd54000">log</a> (<a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a> in_sender, <a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:a9fd575f47e8634ddaf8492a43bd54000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for writing a message to the log instance using sender information for log tagging  <a href="#a9fd575f47e8634ddaf8492a43bd54000">More...</a><br/></td></tr>
+<tr class="separator:a9fd575f47e8634ddaf8492a43bd54000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af494d7578070ae9b6d779c9ecc0392d7"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#af494d7578070ae9b6d779c9ecc0392d7">setTarget</a> (string in_logTarget)</td></tr>
 <tr class="memdesc:af494d7578070ae9b6d779c9ecc0392d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to set the log instance's target (specific per log type)  <a href="#af494d7578070ae9b6d779c9ecc0392d7">More...</a><br/></td></tr>
 <tr class="separator:af494d7578070ae9b6d779c9ecc0392d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a13eb45f0cd3f3d9fa1906fc40cf2b55f">logBroadcast</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
 <tr class="memdesc:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for writing broadcast (system) messages to the log  <a href="#a13eb45f0cd3f3d9fa1906fc40cf2b55f">More...</a><br/></td></tr>
 <tr class="separator:a13eb45f0cd3f3d9fa1906fc40cf2b55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359f085927ecbf47266d042787c01254"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a359f085927ecbf47266d042787c01254">logBroadcast</a> (<a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a> in_sender, <a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:a359f085927ecbf47266d042787c01254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for writing broadcast (system) messages to the log  <a href="#a359f085927ecbf47266d042787c01254">More...</a><br/></td></tr>
+<tr class="separator:a359f085927ecbf47266d042787c01254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04422e20490308120cd3a5e3d505f7d3"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a04422e20490308120cd3a5e3d505f7d3">shutdown</a> ()</td></tr>
 <tr class="memdesc:a04422e20490308120cd3a5e3d505f7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for ensuring the shutdown of the log instance  <a href="#a04422e20490308120cd3a5e3d505f7d3">More...</a><br/></td></tr>
 <tr class="separator:a04422e20490308120cd3a5e3d505f7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +169,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8abcf123f46bba68e51a222c0181a76c"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a8abcf123f46bba68e51a222c0181a76c">getTimeStamp</a> ()</td></tr>
 <tr class="memdesc:a8abcf123f46bba68e51a222c0181a76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a properly formatted time stamp for each log message  <a href="#a8abcf123f46bba68e51a222c0181a76c">More...</a><br/></td></tr>
 <tr class="separator:a8abcf123f46bba68e51a222c0181a76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24b6ea8294ace87c8c7b7f11c56f52e"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#ac24b6ea8294ace87c8c7b7f11c56f52e">makeLogString</a> (<a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a> in_sender, <a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:ac24b6ea8294ace87c8c7b7f11c56f52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">COnstructs a formated log string to be written to the log  <a href="#ac24b6ea8294ace87c8c7b7f11c56f52e">More...</a><br/></td></tr>
+<tr class="separator:ac24b6ea8294ace87c8c7b7f11c56f52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a994ce67c23c15d7d52321ede3ff28f64"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a994ce67c23c15d7d52321ede3ff28f64">getLevelTag</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl)</td></tr>
 <tr class="memdesc:a994ce67c23c15d7d52321ede3ff28f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the string representation of the provided log level  <a href="#a994ce67c23c15d7d52321ede3ff28f64">More...</a><br/></td></tr>
 <tr class="separator:a994ce67c23c15d7d52321ede3ff28f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,9 +184,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa1806fcef246153a42044f6afcb75177"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#aa1806fcef246153a42044f6afcb75177">broadcast</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
 <tr class="memdesc:aa1806fcef246153a42044f6afcb75177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global log write method. writes the message to all contained (previously created) logs  <a href="#aa1806fcef246153a42044f6afcb75177">More...</a><br/></td></tr>
 <tr class="separator:aa1806fcef246153a42044f6afcb75177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af76550775ebdb68f5ebf777f4249deef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#af76550775ebdb68f5ebf777f4249deef">broadcast</a> (<a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a> in_sender, <a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
+<tr class="memdesc:af76550775ebdb68f5ebf777f4249deef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global log write method. writes the message to all contained (previously created) logs  <a href="#af76550775ebdb68f5ebf777f4249deef">More...</a><br/></td></tr>
+<tr class="separator:af76550775ebdb68f5ebf777f4249deef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf02d1e508ed7b956f0dc8c04f52ef4d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#acf02d1e508ed7b956f0dc8c04f52ef4d">logToWindows</a> (<a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a> in_logLvl, string in_message)</td></tr>
 <tr class="memdesc:acf02d1e508ed7b956f0dc8c04f52ef4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message to the windows event logs  <a href="#acf02d1e508ed7b956f0dc8c04f52ef4d">More...</a><br/></td></tr>
 <tr class="separator:acf02d1e508ed7b956f0dc8c04f52ef4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_b_m_s_1_1_core_1_1_b_m_s___object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_b_m_s_1_1_core_1_1_b_m_s___object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS.Core.BMS_Object</a></td></tr>
+<tr class="memitem:ad81e3c2fe0754d2a70df034ca701bd91 inherit pub_static_methods_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#ad81e3c2fe0754d2a70df034ca701bd91">getSubSysName</a> (byte in_subsysID)</td></tr>
+<tr class="memdesc:ad81e3c2fe0754d2a70df034ca701bd91 inherit pub_static_methods_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the string valued sub-system name based on the sub system ID  <a href="#ad81e3c2fe0754d2a70df034ca701bd91">More...</a><br/></td></tr>
+<tr class="separator:ad81e3c2fe0754d2a70df034ca701bd91 inherit pub_static_methods_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -182,6 +203,33 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a139552a6872cf0ecc6961f3464e46204"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a139552a6872cf0ecc6961f3464e46204">m_logName</a></td></tr>
 <tr class="memdesc:a139552a6872cf0ecc6961f3464e46204"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current logger's name  <a href="#a139552a6872cf0ecc6961f3464e46204">More...</a><br/></td></tr>
 <tr class="separator:a139552a6872cf0ecc6961f3464e46204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:aa4b73da5fd4d6bc3764a7d1b5763255f"><td class="memItemLeft" align="right" valign="top">override byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#aa4b73da5fd4d6bc3764a7d1b5763255f">CLASS_ID</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa4b73da5fd4d6bc3764a7d1b5763255f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> class ID  <a href="#aa4b73da5fd4d6bc3764a7d1b5763255f">More...</a><br/></td></tr>
+<tr class="separator:aa4b73da5fd4d6bc3764a7d1b5763255f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td colspan="2" onclick="javascript:toggleInherit('properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html">BMS.Core.BMS_LoggingObject</a></td></tr>
+<tr class="memitem:a637a3a3e5a186fa218c141946d83847f inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td class="memItemLeft" align="right" valign="top">override byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html#a637a3a3e5a186fa218c141946d83847f">SUBSYS_ID</a><code> [get]</code></td></tr>
+<tr class="memdesc:a637a3a3e5a186fa218c141946d83847f inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging sub system ID  <a href="#a637a3a3e5a186fa218c141946d83847f">More...</a><br/></td></tr>
+<tr class="separator:a637a3a3e5a186fa218c141946d83847f inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9bb9ceab970cf4cb5811b1f18c499bc inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td class="memItemLeft" align="right" valign="top">override byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html#ae9bb9ceab970cf4cb5811b1f18c499bc">CLASS_ID</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae9bb9ceab970cf4cb5811b1f18c499bc inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log base class ID  <a href="#ae9bb9ceab970cf4cb5811b1f18c499bc">More...</a><br/></td></tr>
+<tr class="separator:ae9bb9ceab970cf4cb5811b1f18c499bc inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___logging_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td colspan="2" onclick="javascript:toggleInherit('properties_class_b_m_s_1_1_core_1_1_b_m_s___object')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS.Core.BMS_Object</a></td></tr>
+<tr class="memitem:a57de3c9a27b2e7a31010b0a1ec363717 inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memItemLeft" align="right" valign="top">virtual byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#a57de3c9a27b2e7a31010b0a1ec363717">SUBSYS_ID</a><code> [get]</code></td></tr>
+<tr class="memdesc:a57de3c9a27b2e7a31010b0a1ec363717 inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Root level Sub-System ID  <a href="#a57de3c9a27b2e7a31010b0a1ec363717">More...</a><br/></td></tr>
+<tr class="separator:a57de3c9a27b2e7a31010b0a1ec363717 inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10229de092fbf7a8a25fd76f41a65f58 inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memItemLeft" align="right" valign="top">virtual byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#a10229de092fbf7a8a25fd76f41a65f58">CLASS_ID</a><code> [get]</code></td></tr>
+<tr class="memdesc:a10229de092fbf7a8a25fd76f41a65f58 inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html" title="Base class for all BMS enterprise classes ">BMS_Object</a> class ID  <a href="#a10229de092fbf7a8a25fd76f41a65f58">More...</a><br/></td></tr>
+<tr class="separator:a10229de092fbf7a8a25fd76f41a65f58 inherit properties_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_attribs_class_b_m_s_1_1_core_1_1_b_m_s___object"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_b_m_s_1_1_core_1_1_b_m_s___object')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS.Core.BMS_Object</a></td></tr>
+<tr class="memitem:aaf38f333e9f4e8181997d56734875967 inherit pro_static_attribs_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memItemLeft" align="right" valign="top">static object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html#aaf38f333e9f4e8181997d56734875967">sync</a> = new object()</td></tr>
+<tr class="memdesc:aaf38f333e9f4e8181997d56734875967 inherit pro_static_attribs_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread safety object inherited throughout  <a href="#aaf38f333e9f4e8181997d56734875967">More...</a><br/></td></tr>
+<tr class="separator:aaf38f333e9f4e8181997d56734875967 inherit pro_static_attribs_class_b_m_s_1_1_core_1_1_b_m_s___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class for all <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> implementations. Provides interface details and common members as well as current logger containers. </p>
@@ -230,6 +278,57 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af76550775ebdb68f5ebf777f4249deef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void BMS.Core.BMS_Logger.broadcast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a>&#160;</td>
+          <td class="paramname"><em>in_sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Global log write method. writes the message to all contained (previously created) logs </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_sender</td><td>The <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html" title="Base class for all BMS enterprise classes ">BMS_Object</a> sending this message.</td></tr>
+    <tr><td class="paramname">in_logLvl</td><td>The level of this message.</td></tr>
+    <tr><td class="paramname">in_message</td><td>The message to log.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Does not filter log messages. Global log messages are considered system level messages and will always be logged</p>
+
+</div>
+</div>
 <a class="anchor" id="a994ce67c23c15d7d52321ede3ff28f64"></a>
 <div class="memitem">
 <div class="memproto">
@@ -260,6 +359,15 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String representation of the filter level value</dd></dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_b_m_s_1_1_core_1_1_b_m_s___logger_a994ce67c23c15d7d52321ede3ff28f64_icgraph.png" border="0" usemap="#class_b_m_s_1_1_core_1_1_b_m_s___logger_a994ce67c23c15d7d52321ede3ff28f64_icgraph" alt=""/></div>
+<map name="class_b_m_s_1_1_core_1_1_b_m_s___logger_a994ce67c23c15d7d52321ede3ff28f64_icgraph" id="class_b_m_s_1_1_core_1_1_b_m_s___logger_a994ce67c23c15d7d52321ede3ff28f64_icgraph">
+<area shape="rect" id="node2" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#ac24b6ea8294ace87c8c7b7f11c56f52e" title="COnstructs a formated log string to be written to the log " alt="" coords="288,55,485,97"/><area shape="rect" id="node3" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43" title="Logs a message to the console log " alt="" coords="533,12,763,39"/><area shape="rect" id="node5" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d" title="Logs a message to the file log " alt="" coords="547,63,749,89"/><area shape="rect" id="node6" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc" title="Logs a broadcast (system) message, ignoring level filtering " alt="" coords="547,114,749,155"/><area shape="rect" id="node4" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2" title="Logs a broadcast (system) message, ignoring level filtering " alt="" coords="811,5,1040,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -400,6 +508,15 @@ Protected Attributes</h2></td></tr>
 <p>Returns a properly formatted time stamp for each log message </p>
 <dl class="section return"><dt>Returns</dt><dd>String representation of the current time stamp.</dd></dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_b_m_s_1_1_core_1_1_b_m_s___logger_a8abcf123f46bba68e51a222c0181a76c_icgraph.png" border="0" usemap="#class_b_m_s_1_1_core_1_1_b_m_s___logger_a8abcf123f46bba68e51a222c0181a76c_icgraph" alt=""/></div>
+<map name="class_b_m_s_1_1_core_1_1_b_m_s___logger_a8abcf123f46bba68e51a222c0181a76c_icgraph" id="class_b_m_s_1_1_core_1_1_b_m_s___logger_a8abcf123f46bba68e51a222c0181a76c_icgraph">
+<area shape="rect" id="node2" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#ac24b6ea8294ace87c8c7b7f11c56f52e" title="COnstructs a formated log string to be written to the log " alt="" coords="264,55,461,97"/><area shape="rect" id="node3" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43" title="Logs a message to the console log " alt="" coords="509,12,739,39"/><area shape="rect" id="node5" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d" title="Logs a message to the file log " alt="" coords="523,63,725,89"/><area shape="rect" id="node6" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc" title="Logs a broadcast (system) message, ignoring level filtering " alt="" coords="523,114,725,155"/><area shape="rect" id="node4" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2" title="Logs a broadcast (system) message, ignoring level filtering " alt="" coords="787,5,1016,46"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a97d054fecacfeb7aadae1f60d35016f2"></a>
@@ -443,7 +560,59 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a013ef6e1e62ed2172f7618cbc896bb74">BMS.Core.BMS_MultiLog</a>.</p>
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a013ef6e1e62ed2172f7618cbc896bb74">BMS.Core.BMS_MultiLog</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d">BMS.Core.BMS_FileLogger</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9fd575f47e8634ddaf8492a43bd54000"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void BMS.Core.BMS_Logger.log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a>&#160;</td>
+          <td class="paramname"><em>in_sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interface for writing a message to the log instance using sender information for log tagging </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_sender</td><td>The class object logging the message.</td></tr>
+    <tr><td class="paramname">in_logLvl</td><td>THe level of this message.</td></tr>
+    <tr><td class="paramname">in_message</td><td>The message to log.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#aa1d5d319c3772fea85b6a29829dfc5a7">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a6acc4243f7d2437a8252840b4668cf84">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a22e132a6ff2ebf93e670323c0faf7176">BMS.Core.BMS_MultiLog</a>.</p>
 
 </div>
 </div>
@@ -492,6 +661,58 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a359f085927ecbf47266d042787c01254"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void BMS.Core.BMS_Logger.logBroadcast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a>&#160;</td>
+          <td class="paramname"><em>in_sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interface for writing broadcast (system) messages to the log </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_sender</td><td>The <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html" title="Base class for all BMS enterprise classes ">BMS_Object</a> sending this message.</td></tr>
+    <tr><td class="paramname">in_logLvl</td><td>The level of this message.</td></tr>
+    <tr><td class="paramname">in_message</td><td>The message to log.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7512bb1774fa73440f977d414751c22a">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a4ac4e7921261d69e51aef3e360f20e8e">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a15bac4d182e1f00d9c1d9a266fee9be4">BMS.Core.BMS_MultiLog</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acf02d1e508ed7b956f0dc8c04f52ef4d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -533,6 +754,76 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <p>This method will not log messages of type TRACE or DEBUG, these types of messages will simply spam the logs.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac24b6ea8294ace87c8c7b7f11c56f52e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string BMS.Core.BMS_Logger.makeLogString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html">BMS_Object</a>&#160;</td>
+          <td class="paramname"><em>in_sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43">eLogLevel</a>&#160;</td>
+          <td class="paramname"><em>in_logLvl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>in_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>COnstructs a formated log string to be written to the log </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_sender</td><td>The <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___object.html" title="Base class for all BMS enterprise classes ">BMS_Object</a> sending the message.</td></tr>
+    <tr><td class="paramname">in_logLvl</td><td>The level of this message.</td></tr>
+    <tr><td class="paramname">in_message</td><td>The message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String constructed as a log message line</dd></dl>
+<p>If in_sender is null, the message tagging is omitted.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_cgraph.png" border="0" usemap="#class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_cgraph" alt=""/></div>
+<map name="class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_cgraph" id="class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_cgraph">
+<area shape="rect" id="node2" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a8abcf123f46bba68e51a222c0181a76c" title="Returns a properly formatted time stamp for each log message " alt="" coords="263,5,473,46"/><area shape="rect" id="node3" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html#a994ce67c23c15d7d52321ede3ff28f64" title="Provides the string representation of the provided log level " alt="" coords="251,71,485,97"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_icgraph.png" border="0" usemap="#class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_icgraph" alt=""/></div>
+<map name="class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_icgraph" id="class_b_m_s_1_1_core_1_1_b_m_s___logger_ac24b6ea8294ace87c8c7b7f11c56f52e_icgraph">
+<area shape="rect" id="node2" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a35defe69b59070303cc02519672a4d43" title="Logs a message to the console log " alt="" coords="251,12,480,39"/><area shape="rect" id="node4" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a98aa2f42304a3e323ea5b9991534aa9d" title="Logs a message to the file log " alt="" coords="264,63,467,89"/><area shape="rect" id="node5" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a835bc0c7d6d87d0e7a24221486b81ddc" title="Logs a broadcast (system) message, ignoring level filtering " alt="" coords="264,114,467,155"/><area shape="rect" id="node3" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a6668df98baf246609e6036ca0c2644f2" title="Logs a broadcast (system) message, ignoring level filtering " alt="" coords="528,5,757,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -617,7 +908,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Interface for ensuring the shutdown of the log instance </p>
 
-<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7030c436fd42c1e683deca419dff48da">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a15d1343067901a147345309782269a47">BMS.Core.BMS_MultiLog</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a5d6df3debe96ba65f078d01282f43ff6">BMS.Core.BMS_FileLogger</a>.</p>
+<p>Implemented in <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___console_logger.html#a7030c436fd42c1e683deca419dff48da">BMS.Core.BMS_ConsoleLogger</a>, <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___file_logger.html#a5d6df3debe96ba65f078d01282f43ff6">BMS.Core.BMS_FileLogger</a>, and <a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html#a15d1343067901a147345309782269a47">BMS.Core.BMS_MultiLog</a>.</p>
 
 </div>
 </div>
@@ -666,8 +957,31 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="aa4b73da5fd4d6bc3764a7d1b5763255f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override byte BMS.Core.BMS_Logger.CLASS_ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html" title="Abstract base class for all BMS_Logger implementations. Provides interface details and common members...">BMS_Logger</a> class ID </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>E:/Projects/Bad Monkey Software/Software/BME/Core/Logging/<a class="el" href="_b_m_s___logger_8cs.html">BMS_Logger.cs</a></li>
+<li>Logging/<a class="el" href="_b_m_s___logger_8cs.html">BMS_Logger.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -675,7 +989,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_b_m_s.html">BMS</a></li><li class="navelem"><a class="el" href="namespace_b_m_s_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="class_b_m_s_1_1_core_1_1_b_m_s___logger.html">BMS_Logger</a></li>
-    <li class="footer">Generated on Wed Sep 11 2013 10:34:21 for BME.Core by
+    <li class="footer">Generated on Wed Sep 25 2013 01:39:14 for BME.Core by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

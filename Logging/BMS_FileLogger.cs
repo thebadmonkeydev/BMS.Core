@@ -15,6 +15,16 @@ namespace BMS
         /// </summary>
         public class BMS_FileLogFactory : BMS_LogFactory 
         {
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_FileLogFactory Class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x05; }
+            }
+            #endregion
+
             /// <summary>
             /// Creates a new BMS_ConsoleLogger instance.
             /// </summary>
@@ -34,7 +44,15 @@ namespace BMS
         /// </summary>
         public class BMS_FileLogger : BMS_Logger
         {
-            
+            #region Sub-System/Class ID
+            /// <summary>
+            /// BMS_FileLogger Class ID
+            /// </summary>
+            public override byte CLASS_ID
+            {
+                get { return 0x04; }
+            }
+            #endregion
             //readonly private static string m_moduleId = System.Reflection.Assembly.GetExecutingAssembly().GetType("BMS_FileLogger").Namespace;
             
                 //GetExecutingAssembly().GetName().Name;
@@ -84,29 +102,70 @@ namespace BMS
             /// <param name="in_message">The message.</param>
             public override void log(eLogLevel in_logLvl, string in_message)
             {
-                //  Return early if not logging message
-                if (in_logLvl < m_curLogLevel)
+                lock (sync)
                 {
-                    return;
-                }
-
-                StreamWriter logWriter = null;
-                string timeStamp = BMS_Logger.getTimeStamp();
-                try
-                {
-                    logWriter = new StreamWriter(m_fileURI, true);
-                    logWriter.WriteLine(timeStamp + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
-                    logWriter.Flush();
-                }
-                catch (Exception ex)
-                {
-                    BMS_Logger.broadcast(eLogLevel.ERROR, "Could not write to log (" + m_logName + "):\t" + ex.Message + "\n" + ex.StackTrace);
-                }
-                finally
-                {
-                    if (logWriter != null)
+                    //  Return early if not logging message
+                    if (in_logLvl < m_curLogLevel)
                     {
-                        logWriter.Dispose();
+                        return;
+                    }
+
+                    StreamWriter logWriter = null;
+                    string timeStamp = BMS_Logger.getTimeStamp();
+                    try
+                    {
+                        logWriter = new StreamWriter(m_fileURI, true);
+                        logWriter.WriteLine(makeLogString(null, in_logLvl, in_message));
+                        logWriter.Flush();
+                    }
+                    catch (Exception ex)
+                    {
+                        BMS_Logger.broadcast(eLogLevel.ERROR, "Could not write to log (" + m_logName + "):\t" + ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        if (logWriter != null)
+                        {
+                            logWriter.Dispose();
+                        }
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Logs a message to the file log using the provided sender to tag the log message
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message.</param>
+            /// <param name="in_logLvl">THe log level of this message.</param>
+            /// <param name="in_message">The message.</param>
+            public override void log(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                lock (sync)
+                {
+                    //  Return early if not logging message
+                    if (in_logLvl < m_curLogLevel)
+                    {
+                        return;
+                    }
+
+                    StreamWriter logWriter = null;
+                    string timeStamp = BMS_Logger.getTimeStamp();
+                    try
+                    {
+                        logWriter = new StreamWriter(m_fileURI, true);
+                        logWriter.WriteLine(makeLogString(in_sender, in_logLvl, in_message));
+                        logWriter.Flush();
+                    }
+                    catch (Exception ex)
+                    {
+                        BMS_Logger.broadcast(this, eLogLevel.ERROR, "Could not write to log (" + m_logName + "):\t" + ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        if (logWriter != null)
+                        {
+                            logWriter.Dispose();
+                        }
                     }
                 }
             }
@@ -118,19 +177,50 @@ namespace BMS
             /// <param name="in_message">The message to log.</param>
             public override void logBroadcast(eLogLevel in_logLvl, string in_message)
             {
-                StreamWriter logWriter = null;
-                string timeStamp = BMS_Logger.getTimeStamp();
-                try
+                lock (sync)
                 {
-                    logWriter = new StreamWriter(m_fileURI, true);
-                    logWriter.WriteLine(timeStamp + "\t" + BMS_Logger.getLevelTag(in_logLvl) + "\t" + in_message);
-                    logWriter.Flush();
-                }
-                finally
-                {
-                    if (logWriter != null)
+                    StreamWriter logWriter = null;
+                    string timeStamp = BMS_Logger.getTimeStamp();
+                    try
                     {
-                        logWriter.Dispose();
+                        logWriter = new StreamWriter(m_fileURI, true);
+                        logWriter.WriteLine(makeLogString(null, in_logLvl, in_message));
+                        logWriter.Flush();
+                    }
+                    finally
+                    {
+                        if (logWriter != null)
+                        {
+                            logWriter.Dispose();
+                        }
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Logs a broadcast (system) message, ignoring level filtering
+            /// </summary>
+            /// <param name="in_sender">The BMS_Object sending this message.</param>
+            /// <param name="in_logLvl">The level of this message.</param>
+            /// <param name="in_message">The message to log.</param>
+            public override void logBroadcast(BMS_Object in_sender, eLogLevel in_logLvl, string in_message)
+            {
+                lock (sync)
+                {
+                    StreamWriter logWriter = null;
+                    string timeStamp = BMS_Logger.getTimeStamp();
+                    try
+                    {
+                        logWriter = new StreamWriter(m_fileURI, true);
+                        logWriter.WriteLine(makeLogString(in_sender, in_logLvl, in_message));
+                        logWriter.Flush();
+                    }
+                    finally
+                    {
+                        if (logWriter != null)
+                        {
+                            logWriter.Dispose();
+                        }
                     }
                 }
             }
@@ -141,7 +231,10 @@ namespace BMS
             /// <param name="in_logTarget">The new log target as a file path.</param>
             public override void setTarget(string in_logTarget)
             {
-                m_fileURI = in_logTarget;
+                lock (sync)
+                {
+                    m_fileURI = in_logTarget;
+                }
             }
 
             /// <summary>
