@@ -104,7 +104,7 @@ namespace BMS.Core
         /// Loads a configuration from the given XML
         /// </summary>
         /// <param name="in_configDoc">The XmlDocument representing the desired configuration.</param>
-        /// <remarks>Assumes that the provided document points to the top level element as root</remarks>
+        /// <remarks>Assumes that the provided document points to the top level element as root (bmsconfig)</remarks>
         public virtual void load(XmlNode in_configDoc)
         {
             m_raw = in_configDoc;
@@ -174,7 +174,10 @@ namespace BMS.Core
                         }
                     }
 
-                    m_settings.Add(curSetting.getName(), curSetting);
+                    if (in_configNode.ParentNode.Name == "bmsconfig")
+                    {
+                        m_settings.Add(curSetting.getName(), curSetting);
+                    }
                     break;
 
                 default:

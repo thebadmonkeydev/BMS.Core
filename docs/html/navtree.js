@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "BME.Core", "index.html", [
-    [ "README", "md__e_1__projects__bad__monkey__software__software__b_m_e__core__r_e_a_d_m_e.html", null ],
+    [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ],
       [ "Package Functions", "namespacemembers.html", [
