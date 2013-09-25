@@ -9,5 +9,6 @@ var searchData=
   ['bms_5flogger_2ecs',['BMS_Logger.cs',['../_b_m_s___logger_8cs.html',1,'']]],
   ['bms_5floggingobject_2ecs',['BMS_LoggingObject.cs',['../_b_m_s___logging_object_8cs.html',1,'']]],
   ['bms_5fmultilog_2ecs',['BMS_MultiLog.cs',['../_b_m_s___multi_log_8cs.html',1,'']]],
-  ['bms_5fobject_2ecs',['BMS_Object.cs',['../_b_m_s___object_8cs.html',1,'']]]
+  ['bms_5fobject_2ecs',['BMS_Object.cs',['../_b_m_s___object_8cs.html',1,'']]],
+  ['bms_5fsetting_2ecs',['BMS_Setting.cs',['../_b_m_s___setting_8cs.html',1,'']]]
 ];

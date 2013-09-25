@@ -2,7 +2,7 @@ var searchData=
 [
   ['badconfigdefexception',['BadConfigDefException',['../class_b_m_s_1_1_core_1_1_bad_config_def_exception.html',1,'BMS::Core']]],
   ['badconfigfileexception',['BadConfigFileException',['../class_b_m_s_1_1_core_1_1_bad_config_file_exception.html',1,'BMS::Core']]],
-  ['bms_5fattr_3c_20t_20_3e',['BMS_Attr&lt; T &gt;',['../class_b_m_s_1_1_core_1_1_b_m_s___attr_3_01_t_01_4.html',1,'BMS::Core']]],
+  ['bms_5fattr',['BMS_Attr',['../class_b_m_s_1_1_core_1_1_b_m_s___attr.html',1,'BMS::Core']]],
   ['bms_5fconfig',['BMS_Config',['../class_b_m_s_1_1_core_1_1_b_m_s___config.html',1,'BMS::Core']]],
   ['bms_5fconfigmanager',['BMS_ConfigManager',['../class_b_m_s_1_1_core_1_1_b_m_s___config_manager.html',1,'BMS::Core']]],
   ['bms_5fconfigobject',['BMS_ConfigObject',['../class_b_m_s_1_1_core_1_1_b_m_s___config_object.html',1,'BMS::Core']]],
@@ -15,5 +15,6 @@ var searchData=
   ['bms_5floggingobject',['BMS_LoggingObject',['../class_b_m_s_1_1_core_1_1_b_m_s___logging_object.html',1,'BMS::Core']]],
   ['bms_5fmultilog',['BMS_MultiLog',['../class_b_m_s_1_1_core_1_1_b_m_s___multi_log.html',1,'BMS::Core']]],
   ['bms_5fmultilogfactory',['BMS_MultiLogFactory',['../class_b_m_s_1_1_core_1_1_b_m_s___multi_log_factory.html',1,'BMS::Core']]],
-  ['bms_5fobject',['BMS_Object',['../class_b_m_s_1_1_core_1_1_b_m_s___object.html',1,'BMS::Core']]]
+  ['bms_5fobject',['BMS_Object',['../class_b_m_s_1_1_core_1_1_b_m_s___object.html',1,'BMS::Core']]],
+  ['bms_5fsetting',['BMS_Setting',['../class_b_m_s_1_1_core_1_1_b_m_s___setting.html',1,'BMS::Core']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['info',['INFO',['../namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43a551b723eafd6a31d444fcb2f5920fbd3',1,'BMS::Core']]]
+  ['info',['INFO',['../namespace_b_m_s_1_1_core.html#a327c4f5128504a45ef61f00cfd661a43a551b723eafd6a31d444fcb2f5920fbd3',1,'BMS::Core']]],
+  ['isloaded',['isLoaded',['../class_b_m_s_1_1_core_1_1_b_m_s___config.html#a4cb3508440cd10194a7ab4b18df1fa42',1,'BMS::Core::BMS_Config']]]
 ];
